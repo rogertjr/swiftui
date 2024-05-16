@@ -1,5 +1,5 @@
 //
-//  ChartView.swift
+//  LineChartView.swift
 //  CoinGecko-MVVM
 //
 //  Created by Rogério do Carmo Toledo Júnior on 16/05/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct ChartView: View {
+struct LineChartView: View {
     // MARK: - Properties
     let viewModel: CoinDetailsViewModel
     
@@ -47,7 +47,7 @@ struct ChartView: View {
                 }
             }
         } else {
-            Text("Chart not available :(")
+            Text("Chart unavailable :(")
                 .font(.title2)
                 .bold()
         }
@@ -60,6 +60,6 @@ struct ChartView: View {
         return coinsResult
     }
     
-    return ChartView(viewModel: CoinDetailsViewModel(coins.first!))
+    return LineChartView(viewModel: CoinDetailsViewModel(coins.first!))
         .previewLayout(.sizeThatFits)
 }

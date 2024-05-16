@@ -49,27 +49,27 @@ final class CoinDetailsViewModel: ObservableObject {
         return CoinDetailsSectionModel(title: "Overview", stats: [priceStats, marketCapStats, rankStats, volumeStats])
     }
     
-    var additionalDetailsSectionModel : CoinDetailsSectionModel{
-            let high = coin.high24H?.toCurrencyString() ?? "N/a"
-            let highStat = StatisticModel(title: "24H High", value: high, percentageChange: nil)
-            
-            let low = coin.low24H?.toCurrencyString() ?? "N/a"
-            let lowStat = StatisticModel(title: "Low", value: low, percentageChange: nil)
-            
-            let priceChange24H = coin.priceChange24H.toCurrencyString()
-            let percentageChange24H = coin.priceChangePercentage24H
-            let priceChangeStats = StatisticModel(title: "24H Price Change",
-                                                  value: priceChange24H,
-                                                  percentageChange: percentageChange24H)
-            
-            let marketCapChange = String(format:"$%@", coin.marketCapChange24H?.formattedWithAbbreviations() ?? "N/a")
-            let marketCapChangePercentage = coin.marketCapChangePercentage24H
-            let marketCapStats = StatisticModel(title: "24H Market CapChange",
-                                                value: marketCapChange,
-                                                percentageChange: marketCapChangePercentage)
-            
-            return CoinDetailsSectionModel(title: "Additional details", stats: [highStat, lowStat, priceChangeStats, marketCapStats])
-        }
+    var additionalDetailsSectionModel : CoinDetailsSectionModel {
+        let high = coin.high24H?.toCurrencyString() ?? "N/a"
+        let highStat = StatisticModel(title: "24H High", value: high, percentageChange: nil)
+        
+        let low = coin.low24H?.toCurrencyString() ?? "N/a"
+        let lowStat = StatisticModel(title: "Low", value: low, percentageChange: nil)
+        
+        let priceChange24H = coin.priceChange24H.toCurrencyString()
+        let percentageChange24H = coin.priceChangePercentage24H
+        let priceChangeStats = StatisticModel(title: "24H Price Change",
+                                              value: priceChange24H,
+                                              percentageChange: percentageChange24H)
+        
+        let marketCapChange = String(format:"$%@", coin.marketCapChange24H?.formattedWithAbbreviations() ?? "N/a")
+        let marketCapChangePercentage = coin.marketCapChangePercentage24H
+        let marketCapStats = StatisticModel(title: "24H Market CapChange",
+                                            value: marketCapChange,
+                                            percentageChange: marketCapChangePercentage)
+        
+        return CoinDetailsSectionModel(title: "Additional details", stats: [highStat, lowStat, priceChangeStats, marketCapStats])
+    }
     
     // MARK: - Init
     init(_ coin: Coin) {

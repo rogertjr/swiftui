@@ -78,7 +78,8 @@ final class AppViewModel: ObservableObject {
     }
     
     private func filterCoinsBySearch() {
-        DispatchQueue.global(qos: .userInteractive).async {
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            guard let self else { return }
             let results = self.coins
                 .lazy
                 .filter { [weak self] coin in
@@ -88,6 +89,11 @@ final class AppViewModel: ObservableObject {
                 }
 
             DispatchQueue.main.async { [weak self] in
+                if results.count == 0 {
+                    self?.searchedCoins = nil
+                    return
+                }
+                
                 self?.searchedCoins = results.compactMap({ $0 }).sorted(by: {
                     self?.sort == .asc ? $0.marketCapRank < $1.marketCapRank : $0.marketCapRank > $1.marketCapRank
                 })

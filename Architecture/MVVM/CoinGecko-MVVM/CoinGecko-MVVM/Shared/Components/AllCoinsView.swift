@@ -39,7 +39,7 @@ struct AllCoinsView: View {
 private extension AllCoinsView {
     @ViewBuilder
     var gridView: some View {
-        if let searchedCoins = viewModel.searchedCoins, searchedCoins.count > 0 {
+        if viewModel.searchedText != "", let searchedCoins = viewModel.searchedCoins, searchedCoins.count > 0 {
             LazyVGrid(columns: columns, spacing: 4) {
                 ForEach(searchedCoins, id: \.symbol) { coin in
                     NavigationLink {
@@ -51,6 +51,10 @@ private extension AllCoinsView {
                     .buttonStyle(.plain)
                 }
             }
+        } else if viewModel.searchedText != "" && viewModel.searchedCoins == nil  {
+            Text("No coins were found :(")
+                .font(.subheadline).bold()
+                .deferredRendering(for: 0.8)
         } else {
             LazyVGrid(columns: columns, spacing: 4) {
                 ForEach(viewModel.coins, id: \.symbol) { coin in
@@ -76,4 +80,5 @@ private extension AllCoinsView {
 #Preview {
     AllCoinsView()
         .environmentObject(AppViewModel(CoinService()))
+        .previewLayout(.sizeThatFits)
 }
