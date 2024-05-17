@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinRowView: View {
     // MARK: - Properties
     let coin: Coin
+    @Binding var isLoading: Bool
     
     // MARK: - Layout
     var body: some View {
@@ -27,7 +28,8 @@ struct CoinRowView: View {
                                 .ignoresSafeArea(.all)
                                 .clipped()
                         } placeholder: {
-                            ProgressView()
+                            Image(systemName: "number.circle.fill")
+                                .redacted(reason: .placeholder)
                         }
                 } else {
                     Image(systemName: "number.circle.fill")
@@ -63,6 +65,8 @@ struct CoinRowView: View {
                     .padding(.leading, 6)
             }
         }
+        .redacted(reason: isLoading ? .placeholder : [])
+        .animatePlaceholder(isLoading: $isLoading)
     }
 }
 
@@ -74,6 +78,9 @@ struct CoinRowView: View {
         return coinsResult
     }
     
-    return CoinRowView(coin: coins.first!)
-        .previewLayout(.sizeThatFits)
+    return VStack {
+        CoinRowView(coin: coins.first!, isLoading: .constant(true))
+        CoinRowView(coin: coins.first!, isLoading: .constant(false))
+    }
+    .previewLayout(.sizeThatFits)
 }

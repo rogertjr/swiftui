@@ -8,11 +8,22 @@
 import Foundation
 import SwiftUI
 
+struct Stock: Identifiable {
+    var id = UUID()
+    var name: String
+    var date: String
+    var openPrice: Double
+    var highPrice: Double
+    var lowPrice: Double
+    var closePrice: Double
+}
+
 final class CoinDetailsViewModel: ObservableObject {
     // MARK: - Properties
     private let coin: Coin
     
-    var chartData: [ChartData] = []
+    private (set) var chartData: [ChartData] = []
+    private (set) var candleChartData: [Stock] = []
     var startDate = Date()
     var endDate = Date()
     var minPrice = 0.0
@@ -49,7 +60,7 @@ final class CoinDetailsViewModel: ObservableObject {
         return CoinDetailsSectionModel(title: "Overview", stats: [priceStats, marketCapStats, rankStats, volumeStats])
     }
     
-    var additionalDetailsSectionModel : CoinDetailsSectionModel {
+    var additionalDetailsSectionModel: CoinDetailsSectionModel {
         let high = coin.high24H?.toCurrencyString() ?? "N/a"
         let highStat = StatisticModel(title: "24H High", value: high, percentageChange: nil)
         
@@ -89,8 +100,7 @@ final class CoinDetailsViewModel: ObservableObject {
         
         for price in priceData.reversed() {
             let date = endDate.addingTimeInterval(-1 * 60 * 60 * Double(index))
-            let chartDataItem = ChartData(date: date, value: price)
-            self.chartData.append(chartDataItem)
+            chartData.append(ChartData(date: date, value: price))
             index += 1
         }
     }

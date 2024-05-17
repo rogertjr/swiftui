@@ -8,15 +8,10 @@
 import SwiftUI
 
 struct CoinDetailsView: View {
-    enum ChartStyle: String, CaseIterable, Identifiable {
-        var id: Self { return self }
-        case bar, line
-    }
     
     // MARK: - Properties
     let coin: Coin
     private let viewModel: CoinDetailsViewModel
-    @State private var selectedType: ChartStyle = .line
     
     // MARK: - Init
     init(_ coin: Coin) {
@@ -28,25 +23,9 @@ struct CoinDetailsView: View {
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
-                Picker(selection: $selectedType) {
-                    ForEach(ChartStyle.allCases) { style in
-                        Text(style.rawValue)
-                    }
-                } label: {
-                    Text("Chart Style")
-                }
-                .pickerStyle(.segmented)
-
-                switch selectedType {
-                case .bar:
-                    BarChartView(viewModel: viewModel)
-                        .frame(height: 250)
-                        .padding(.vertical)
-                case .line:
-                    LineChartView(viewModel: viewModel)
-                        .frame(height: 250)
-                        .padding(.vertical)
-                }
+                LineChartView(viewModel: viewModel)
+                    .frame(height: 250)
+                    .padding(.vertical)
                 
                 CoinDetailSectionView(model: viewModel.overviewSectionModel)
                     .padding(.vertical)

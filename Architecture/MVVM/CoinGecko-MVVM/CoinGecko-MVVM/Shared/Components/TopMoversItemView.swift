@@ -10,6 +10,7 @@ import SwiftUI
 struct TopMoversItemView: View {
     // MARK: - Properties
     let coin: Coin
+    @Binding var isLoading: Bool
     
     // MARK: - Layout
     var body: some View {
@@ -23,7 +24,9 @@ struct TopMoversItemView: View {
                             .ignoresSafeArea(.all)
                             .clipped()
                     } placeholder: {
-                        ProgressView()
+                        Image(systemName: "number.circle.fill")
+                            .redacted(reason: isLoading ? .placeholder : [])
+                            .animatePlaceholder(isLoading: $isLoading)
                     }
                 } else {
                     Image(systemName: "number.circle.fill")
@@ -54,15 +57,21 @@ struct TopMoversItemView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(.systemGray4), lineWidth: 1)
         )
+        .redacted(reason: isLoading ? .placeholder : [])
+        .animatePlaceholder(isLoading: $isLoading)
     }
 }
 
+// MARK: - PreviewProvider
 #Preview {
     var coins: [Coin] {
         let coinsResult = try! JSONMapper.decode(MockResultFiles.coinList.rawValue, type: [Coin].self)
         return coinsResult
     }
     
-    return TopMoversItemView(coin: coins.first!)
-            .previewLayout(.sizeThatFits)
+    return HStack {
+        TopMoversItemView(coin: coins.first!, isLoading: .constant(true))
+        TopMoversItemView(coin: coins.first!, isLoading: .constant(false))
+    }
+    .previewLayout(.sizeThatFits)
 }

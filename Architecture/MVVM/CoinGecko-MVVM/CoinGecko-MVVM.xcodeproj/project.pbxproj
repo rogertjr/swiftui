@@ -39,10 +39,32 @@
 		D9B604682BF64A40007FBD16 /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604672BF64A40007FBD16 /* CoinDetailsView.swift */; };
 		D9B6046A2BF64A7C007FBD16 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604692BF64A7C007FBD16 /* LineChartView.swift */; };
 		D9B6046C2BF64AB2007FBD16 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6046B2BF64AB2007FBD16 /* StatisticView.swift */; };
-		D9B6046E2BF6766B007FBD16 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6046D2BF6766B007FBD16 /* BarChartView.swift */; };
 		D9B604702BF68255007FBD16 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6046F2BF68255007FBD16 /* View+Ext.swift */; };
 		D9B604732BF68275007FBD16 /* DeferredModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604722BF68275007FBD16 /* DeferredModifier.swift */; };
+		D9B604952BF77DD0007FBD16 /* CoinGeckoServiceTestDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604822BF77B4B007FBD16 /* CoinGeckoServiceTestDoubles.swift */; };
+		D9B604962BF77DD9007FBD16 /* CoinApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604272BF62C7C007FBD16 /* CoinApi.swift */; };
+		D9B604972BF77DDC007FBD16 /* CoinService+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604292BF62CB7007FBD16 /* CoinService+Ext.swift */; };
+		D9B604982BF77DDF007FBD16 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6042B2BF62CD4007FBD16 /* CoinService.swift */; };
+		D9B604992BF77DE5007FBD16 /* JSONMApper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604562BF63178007FBD16 /* JSONMApper.swift */; };
+		D9B6049A2BF77DE9007FBD16 /* MockResultFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604592BF631A6007FBD16 /* MockResultFiles.swift */; };
+		D9B6049B2BF77DEC007FBD16 /* CoinList.json in Resources */ = {isa = PBXBuildFile; fileRef = D9B6045B2BF63224007FBD16 /* CoinList.json */; };
+		D9B6049C2BF77DF4007FBD16 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6042F2BF62D19007FBD16 /* Coin.swift */; };
+		D9B6049D2BF77DF7007FBD16 /* CoinDetailsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604332BF62D9C007FBD16 /* CoinDetailsSectionModel.swift */; };
+		D9B6049E2BF77DFA007FBD16 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604312BF62D87007FBD16 /* ChartData.swift */; };
+		D9B6049F2BF77DFC007FBD16 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604352BF62DB4007FBD16 /* StatisticModel.swift */; };
+		D9B604A12BF78020007FBD16 /* CoinServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604A02BF78020007FBD16 /* CoinServiceTests.swift */; };
+		D9B604A62BF7D05D007FBD16 /* AnimatePlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B604A52BF7D05D007FBD16 /* AnimatePlaceholderModifier.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9B604902BF77DAF007FBD16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B604082BF62C2B007FBD16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B6040F2BF62C2B007FBD16;
+			remoteInfo = "CoinGecko-MVVM";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D9B604102BF62C2B007FBD16 /* CoinGecko-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoinGecko-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,13 +101,23 @@
 		D9B604672BF64A40007FBD16 /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
 		D9B604692BF64A7C007FBD16 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		D9B6046B2BF64AB2007FBD16 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
-		D9B6046D2BF6766B007FBD16 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		D9B6046F2BF68255007FBD16 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		D9B604722BF68275007FBD16 /* DeferredModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredModifier.swift; sourceTree = "<group>"; };
+		D9B604822BF77B4B007FBD16 /* CoinGeckoServiceTestDoubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoServiceTestDoubles.swift; sourceTree = "<group>"; };
+		D9B6048C2BF77DAF007FBD16 /* Pokemon-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pokemon-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B604A02BF78020007FBD16 /* CoinServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinServiceTests.swift; sourceTree = "<group>"; };
+		D9B604A52BF7D05D007FBD16 /* AnimatePlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatePlaceholderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D9B6040D2BF62C2B007FBD16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B604892BF77DAF007FBD16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -99,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D9B604122BF62C2B007FBD16 /* CoinGecko-MVVM */,
+				D9B6048D2BF77DAF007FBD16 /* Pokemon-MVVMTests */,
 				D9B604112BF62C2B007FBD16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D9B604102BF62C2B007FBD16 /* CoinGecko-MVVM.app */,
+				D9B6048C2BF77DAF007FBD16 /* Pokemon-MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,7 +283,6 @@
 				D9B6045F2BF6336E007FBD16 /* TopMoversItemView.swift */,
 				D9B604692BF64A7C007FBD16 /* LineChartView.swift */,
 				D9B6046B2BF64AB2007FBD16 /* StatisticView.swift */,
-				D9B6046D2BF6766B007FBD16 /* BarChartView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -294,8 +327,34 @@
 			isa = PBXGroup;
 			children = (
 				D9B604722BF68275007FBD16 /* DeferredModifier.swift */,
+				D9B604A52BF7D05D007FBD16 /* AnimatePlaceholderModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D9B604812BF69041007FBD16 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D9B604822BF77B4B007FBD16 /* CoinGeckoServiceTestDoubles.swift */,
+				D9B604A02BF78020007FBD16 /* CoinServiceTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D9B6048D2BF77DAF007FBD16 /* Pokemon-MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B604A22BF78B45007FBD16 /* Features */,
+				D9B604812BF69041007FBD16 /* Networking */,
+			);
+			path = "Pokemon-MVVMTests";
+			sourceTree = "<group>";
+		};
+		D9B604A22BF78B45007FBD16 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +377,24 @@
 			productReference = D9B604102BF62C2B007FBD16 /* CoinGecko-MVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D9B6048B2BF77DAF007FBD16 /* Pokemon-MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B604922BF77DAF007FBD16 /* Build configuration list for PBXNativeTarget "Pokemon-MVVMTests" */;
+			buildPhases = (
+				D9B604882BF77DAF007FBD16 /* Sources */,
+				D9B604892BF77DAF007FBD16 /* Frameworks */,
+				D9B6048A2BF77DAF007FBD16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B604912BF77DAF007FBD16 /* PBXTargetDependency */,
+			);
+			name = "Pokemon-MVVMTests";
+			productName = "Pokemon-MVVMTests";
+			productReference = D9B6048C2BF77DAF007FBD16 /* Pokemon-MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,6 +407,10 @@
 				TargetAttributes = {
 					D9B6040F2BF62C2B007FBD16 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					D9B6048B2BF77DAF007FBD16 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D9B6040F2BF62C2B007FBD16;
 					};
 				};
 			};
@@ -347,6 +428,7 @@
 			projectRoot = "";
 			targets = (
 				D9B6040F2BF62C2B007FBD16 /* CoinGecko-MVVM */,
+				D9B6048B2BF77DAF007FBD16 /* Pokemon-MVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -359,6 +441,14 @@
 				D9B6041C2BF62C2E007FBD16 /* Preview Assets.xcassets in Resources */,
 				D9B604182BF62C2E007FBD16 /* Assets.xcassets in Resources */,
 				D9B6045C2BF63224007FBD16 /* CoinList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6048A2BF77DAF007FBD16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B6049B2BF77DEC007FBD16 /* CoinList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,13 +477,13 @@
 				D9B604342BF62D9C007FBD16 /* CoinDetailsSectionModel.swift in Sources */,
 				D9B6043E2BF62F2B007FBD16 /* Date+Ext.swift in Sources */,
 				D9B604522BF630F5007FBD16 /* AllCoinsView.swift in Sources */,
-				D9B6046E2BF6766B007FBD16 /* BarChartView.swift in Sources */,
 				D9B604702BF68255007FBD16 /* View+Ext.swift in Sources */,
 				D9B6042A2BF62CB7007FBD16 /* CoinService+Ext.swift in Sources */,
 				D9B604542BF63114007FBD16 /* CoinRowView.swift in Sources */,
 				D9B604422BF62F75007FBD16 /* Int+Ext.swift in Sources */,
 				D9B6043B2BF62EF3007FBD16 /* Theme.swift in Sources */,
 				D9B6044A2BF63028007FBD16 /* Sort.swift in Sources */,
+				D9B604A62BF7D05D007FBD16 /* AnimatePlaceholderModifier.swift in Sources */,
 				D9B6045E2BF6333F007FBD16 /* TopMoversView.swift in Sources */,
 				D9B604362BF62DB4007FBD16 /* StatisticModel.swift in Sources */,
 				D9B6045A2BF631A6007FBD16 /* MockResultFiles.swift in Sources */,
@@ -404,7 +494,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9B604882BF77DAF007FBD16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B604962BF77DD9007FBD16 /* CoinApi.swift in Sources */,
+				D9B6049F2BF77DFC007FBD16 /* StatisticModel.swift in Sources */,
+				D9B6049D2BF77DF7007FBD16 /* CoinDetailsSectionModel.swift in Sources */,
+				D9B604992BF77DE5007FBD16 /* JSONMApper.swift in Sources */,
+				D9B6049A2BF77DE9007FBD16 /* MockResultFiles.swift in Sources */,
+				D9B604A12BF78020007FBD16 /* CoinServiceTests.swift in Sources */,
+				D9B604982BF77DDF007FBD16 /* CoinService.swift in Sources */,
+				D9B6049E2BF77DFA007FBD16 /* ChartData.swift in Sources */,
+				D9B604972BF77DDC007FBD16 /* CoinService+Ext.swift in Sources */,
+				D9B6049C2BF77DF4007FBD16 /* Coin.swift in Sources */,
+				D9B604952BF77DD0007FBD16 /* CoinGeckoServiceTestDoubles.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9B604912BF77DAF007FBD16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B6040F2BF62C2B007FBD16 /* CoinGecko-MVVM */;
+			targetProxy = D9B604902BF77DAF007FBD16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D9B6041D2BF62C2E007FBD16 /* Debug */ = {
@@ -593,6 +709,45 @@
 			};
 			name = Release;
 		};
+		D9B604932BF77DAF007FBD16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.rogertjr.Pokemon-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinGecko-MVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinGecko-MVVM";
+			};
+			name = Debug;
+		};
+		D9B604942BF77DAF007FBD16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.rogertjr.Pokemon-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinGecko-MVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinGecko-MVVM";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,6 +765,15 @@
 			buildConfigurations = (
 				D9B604202BF62C2E007FBD16 /* Debug */,
 				D9B604212BF62C2E007FBD16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B604922BF77DAF007FBD16 /* Build configuration list for PBXNativeTarget "Pokemon-MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B604932BF77DAF007FBD16 /* Debug */,
+				D9B604942BF77DAF007FBD16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

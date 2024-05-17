@@ -15,65 +15,29 @@ struct HomeView: View {
     // MARK: - Layout
     var body: some View {
         NavigationStack {
-            if viewModel.coins.isEmpty {
-                Spacer()
+            ScrollView(.vertical, showsIndicators: false) {
+                TopMoversView()
+                    .environmentObject(viewModel)
                 
-                VStack(alignment: .center) {
-                    Text("Coin list is empty")
-                        .font(.subheadline.bold())
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
+                Divider()
+                    .padding(.horizontal)
                 
-                Spacer()
-            } else {
-                ScrollView(.vertical, showsIndicators: false) {
-                    TopMoversView()
-                        .environmentObject(viewModel)
-                    
-                    Divider()
-                        .padding(.horizontal)
-                    
-                    AllCoinsView()
-                        .environmentObject(viewModel)
-                }
-                .navigationTitle("Live Prices")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading, content: {
-                        Button {
-                            Task {
-                                isRotating.toggle()
-                                await viewModel.fetchCoins()
-                            }
-                        } label: {
-                            Image(systemName: "goforward")
-                                .font(.caption)
-                                .foregroundColor(Theme.textColor)
-                                .rotationEffect(Angle.degrees(isRotating ? 360 : 0))
-                                .animation(.easeOut, value: isRotating)
-                        }
-                    })
-                    
-                    ToolbarItem(placement: .navigationBarTrailing, content: {
-                        Menu {
-                            Section {
-                                Text("Sort")
-                                Picker(selection: $viewModel.sort) {
-                                    Label("Ascending", systemImage: "arrow.up").tag(Sort.asc)
-                                    Label("Descending", systemImage: "arrow.down").tag(Sort.desc)
-                                } label: {
-                                    Text("Sort By")
-                                }
-                            }
-                        } label: {
-                            Image(systemName: "arrow.up.arrow.down")
-                                .font(.caption)
-                                .foregroundColor(Theme.textColor)
-                        }
-                    })
-                }
-                .onTapGesture { UIApplication.shared.endEditing() }
+                AllCoinsView()
+                    .environmentObject(viewModel)
+                
+                if case .isLoading = viewModel.state {
+                   ProgressView("Loading...")
+                       .frame(maxWidth: .infinity, maxHeight: .infinity)
+                       .foregroundColor(Theme.textColor.opacity(0.5))
+                       .padding(.top)
+               }
             }
+            .navigationTitle("Live Prices")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading, content: { refreshToolbarButton })
+                ToolbarItem(placement: .navigationBarTrailing, content: { sortToolbarButton })
+            }
+            .onTapGesture { UIApplication.shared.endEditing() }
         }
         .searchable(text: $viewModel.searchedText)
         .autocorrectionDisabled(true)
@@ -84,18 +48,46 @@ struct HomeView: View {
             }
             Button("Cancel", role: .destructive) { }
         }
-        .overlay(content: {
-            ZStack {
-                if case .isLoading = viewModel.state {
-                    ProgressView("Loading...")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .foregroundColor(Theme.background)
-                }
-            }
-        })
     }
 }
 
+// MARK: - Views
+private extension HomeView {
+    var refreshToolbarButton: some View {
+        Button {
+            Task {
+                isRotating.toggle()
+                await viewModel.fetchCoins()
+            }
+        } label: {
+            Image(systemName: "goforward")
+                .font(.caption)
+                .foregroundColor(Theme.textColor)
+                .rotationEffect(Angle.degrees(isRotating ? 360 : 0))
+                .animation(.easeOut, value: isRotating)
+        }
+    }
+    
+    var sortToolbarButton: some View {
+        Menu {
+            Section {
+                Text("Sort")
+                Picker(selection: $viewModel.sort) {
+                    Label("Ascending", systemImage: "arrow.up").tag(Sort.asc)
+                    Label("Descending", systemImage: "arrow.down").tag(Sort.desc)
+                } label: {
+                    Text("Sort By")
+                }
+            }
+        } label: {
+            Image(systemName: "arrow.up.arrow.down")
+                .font(.caption)
+                .foregroundColor(Theme.textColor)
+        }
+    }
+}
+
+// MARK: - PreviewProvider
 #Preview {
     HomeView()
 }

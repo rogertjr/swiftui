@@ -45,10 +45,11 @@ private extension AllCoinsView {
                     NavigationLink {
                         CoinDetailsView(coin)
                     } label: {
-                        CoinRowView(coin: coin)
+                        CoinRowView(coin: coin, isLoading: $viewModel.isLoading)
                             .tint(Theme.textColor)
                     }
                     .buttonStyle(.plain)
+                    .redacted(reason: .placeholder)
                 }
             }
         } else if viewModel.searchedText != "" && viewModel.searchedCoins == nil  {
@@ -61,7 +62,7 @@ private extension AllCoinsView {
                     NavigationLink {
                         CoinDetailsView(coin)
                     } label: {
-                        CoinRowView(coin: coin)
+                        CoinRowView(coin: coin, isLoading: $viewModel.isLoading)
                             .tint(Theme.textColor)
                             .task {
                                 if viewModel.hasReachedEnd(of: coin) && !viewModel.isLoading {

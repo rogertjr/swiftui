@@ -27,7 +27,7 @@ final class AppViewModel: ObservableObject {
     private var page: Int = 1
     private var perPage: String = "50"
     
-    var isLoading: Bool { return state == .isLoading }
+    var isLoading: Bool = false
     var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Init
@@ -118,11 +118,18 @@ final class AppViewModel: ObservableObject {
         resetData()
         
         state = .isLoading
-        defer { state = .finishedLoading }
+        isLoading = true
+        preparePlaceholderData()
+        
+        defer {
+            state = .finishedLoading
+            isLoading = false
+        }
         
         do {
+            try? await Task.sleep(nanoseconds: 2 * 1_000_000_000) // for testing purposes ;)
             let coinResponse = try await service.fetchAllCoins(String(page), perPage: perPage)
-            coins += sortCoins(coinResponse)
+            coins = sortCoins(coinResponse)
             setUpTopMovingCoins()
             hasError = false
             HapticManager.notification(type: .success)
@@ -145,19 +152,20 @@ final class AppViewModel: ObservableObject {
         defer { state = .finishedLoading }
         
         do {
-            let coinResponse = try await service.fetchAllCoins(String(page), perPage: perPage)
+            guard let coinResponse = try? await service.fetchAllCoins(String(page), perPage: perPage) else { return }
             coins += sortCoins(coinResponse)
             setUpTopMovingCoins()
             hasError = false
             HapticManager.notification(type: .success)
-        } catch {
-            state = .error("Failed to fetch coins")
-            hasError = true
-            if let networkingError = error as? CoinService.NetworkingError {
-                self.error = networkingError
-            } else {
-                self.error = .custom(error)
-            }
         }
+    }
+}
+
+
+extension AppViewModel {
+    private func preparePlaceholderData() {
+        guard let mockedCoins = try? JSONMapper.decode(MockResultFiles.coinList.rawValue, type: [Coin].self) else { return }
+        coins = sortCoins(Array(mockedCoins.prefix(10)))
+        setUpTopMovingCoins()
     }
 }

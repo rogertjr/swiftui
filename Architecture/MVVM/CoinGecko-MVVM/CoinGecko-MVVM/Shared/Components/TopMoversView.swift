@@ -23,7 +23,7 @@ struct TopMoversView: View {
                         NavigationLink {
                             CoinDetailsView(coin)
                         } label: {
-                            TopMoversItemView(coin: coin)
+                            TopMoversItemView(coin: coin, isLoading: $viewModel.isLoading)
                                 .tint(Theme.textColor)
                         }
                         .buttonStyle(.plain)

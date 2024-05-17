@@ -11,4 +11,8 @@ extension View {
     func deferredRendering(for seconds: Double) -> some View {
         modifier(DeferredViewModifier(threshold: seconds))
     }
+    
+    func animatePlaceholder(isLoading: Binding<Bool>) -> some View {
+        modifier(AnimatePlaceholderModifier(isLoading: isLoading))
+    }
 }

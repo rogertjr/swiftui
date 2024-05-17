@@ -54,6 +54,12 @@ struct Coin: Codable, Identifiable {
     }
 }
 
+extension Coin: Equatable {
+    static func == (lhs: Coin, rhs: Coin) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 // MARK: - Roi
 struct Roi: Codable {
     let times: Double
