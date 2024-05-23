@@ -24,8 +24,8 @@ struct ChartsView: View {
                     ForEach(ChartType.allCases, id: \.self) {
                         Text($0.rawValue.capitalized).tag($0)
                     }
-                    .pickerStyle(.segmented)
                 }
+                .pickerStyle(.segmented)
                 
                 Divider()
                     .padding(.vertical)

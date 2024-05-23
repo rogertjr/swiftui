@@ -24,6 +24,8 @@
 		D9FA7CF42BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CF32BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift */; };
 		D9FA7CF62BFFC84500B9EBF8 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CF52BFFC84500B9EBF8 /* PieChartView.swift */; };
 		D9FA7CF82BFFC9CC00B9EBF8 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CF72BFFC9CC00B9EBF8 /* ChartsView.swift */; };
+		D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */; };
+		D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		D9FA7CF32BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDataSeriesChartView.swift; sourceTree = "<group>"; };
 		D9FA7CF52BFFC84500B9EBF8 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		D9FA7CF72BFFC9CC00B9EBF8 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +110,9 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7CEE2BFFBC5800B9EBF8 /* Charts */,
 				D9FA7CD62BFFAF1600B9EBF8 /* Features.swift */,
+				D9FA7CEE2BFFBC5800B9EBF8 /* Charts */,
 				D9FA7CE32BFFB6AD00B9EBF8 /* Grids */,
-				D9FA7CD82BFFB0AE00B9EBF8 /* LazyGrids */,
-				D9FA7CD42BFFAECD00B9EBF8 /* HomeView */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -145,6 +147,7 @@
 		D9FA7CDE2BFFB33300B9EBF8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7CF92BFFD20800B9EBF8 /* Components */,
 				D9FA7CDF2BFFB34000B9EBF8 /* EmojiCellView.swift */,
 			);
 			path = Shared;
@@ -154,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				D9FA7CE62BFFB6C900B9EBF8 /* GridView.swift */,
+				D9FA7CD82BFFB0AE00B9EBF8 /* LazyGrids */,
+				D9FA7CD42BFFAECD00B9EBF8 /* HomeView */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -168,6 +173,15 @@
 				D9FA7CF72BFFC9CC00B9EBF8 /* ChartsView.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		D9FA7CF92BFFD20800B9EBF8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */,
+				D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FA7CF62BFFC84500B9EBF8 /* PieChartView.swift in Sources */,
+				D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */,
 				D9FA7CDD2BFFB0FE00B9EBF8 /* Emoji.swift in Sources */,
 				D9FA7CF82BFFC9CC00B9EBF8 /* ChartsView.swift in Sources */,
 				D9FA7CE92BFFB6DE00B9EBF8 /* Item.swift in Sources */,
@@ -254,6 +269,7 @@
 				D9FA7CC52BFFAEAB00B9EBF8 /* FeatureExampleSUIApp.swift in Sources */,
 				D9FA7CF22BFFC17700B9EBF8 /* HeatChartView.swift in Sources */,
 				D9FA7CE22BFFB4FA00B9EBF8 /* LazyHGridView.swift in Sources */,
+				D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */,
 				D9FA7CF02BFFBC6200B9EBF8 /* BarChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

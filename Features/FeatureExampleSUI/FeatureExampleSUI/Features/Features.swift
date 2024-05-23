@@ -14,4 +14,13 @@ enum Features: String, CaseIterable {
     var description: String {
         return self.rawValue.capitalized
     }
+    
+    var iconName: String {
+        switch self {
+        case .grid:
+            return "square.grid.3x2"
+        case .charts:
+            return "chart.pie"
+        }
+    }
 }

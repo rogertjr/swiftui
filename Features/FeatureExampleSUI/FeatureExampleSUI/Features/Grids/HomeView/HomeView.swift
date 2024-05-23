@@ -12,12 +12,12 @@ struct HomeView: View {
     var body: some View {
         List {
             ForEach(Features.allCases, id: \.self) { feat in
-                NavigationLink(destination: featureView(feat)) {
-                    Text(feat.description)
-                }
+                ItemRowView(title: feat.description,
+                            icon: feat.iconName,
+                            content: { featureView(feat) })
             }
         }
-        .navigationTitle("Feature Examples")
+        .navigationTitle("SwiftUI")
     }
 }
 

@@ -35,8 +35,8 @@ struct GridView: View {
                     ForEach(GridType.allCases, id: \.self) {
                         Text($0.description.capitalized).tag($0)
                     }
-                    .pickerStyle(.segmented)
                 }
+                .pickerStyle(SegmentedPickerStyle())
                 
                 Divider()
                     .padding(.vertical)
