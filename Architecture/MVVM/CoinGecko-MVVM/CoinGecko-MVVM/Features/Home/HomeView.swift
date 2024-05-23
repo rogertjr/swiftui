@@ -11,6 +11,7 @@ struct HomeView: View {
     // MARK: - Properties
     @StateObject private var viewModel = AppViewModel()
     @State private var isRotating: Bool = false
+    @State private var isPresentingSearchBar: Bool = false
     
     // MARK: - Layout
     var body: some View {
@@ -39,7 +40,7 @@ struct HomeView: View {
             }
             .onTapGesture { UIApplication.shared.endEditing() }
         }
-        .searchable(text: $viewModel.searchedText)
+        .searchable(text: $viewModel.searchedText, placement: .automatic)
         .autocorrectionDisabled(true)
         .task { await viewModel.fetchCoins() }
         .alert(isPresented: $viewModel.hasError, error: viewModel.error) {
