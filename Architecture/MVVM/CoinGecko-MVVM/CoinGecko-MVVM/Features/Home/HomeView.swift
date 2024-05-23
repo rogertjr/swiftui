@@ -28,7 +28,7 @@ struct HomeView: View {
                 if case .isLoading = viewModel.state {
                    ProgressView("Loading...")
                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                       .foregroundColor(Theme.textColor.opacity(0.5))
+                       .foregroundStyle(Theme.textColor.opacity(0.5))
                        .padding(.top)
                }
             }
@@ -62,7 +62,7 @@ private extension HomeView {
         } label: {
             Image(systemName: "goforward")
                 .font(.caption)
-                .foregroundColor(Theme.textColor)
+                .foregroundStyle(Theme.textColor)
                 .rotationEffect(Angle.degrees(isRotating ? 360 : 0))
                 .animation(.easeOut, value: isRotating)
         }
@@ -82,7 +82,7 @@ private extension HomeView {
         } label: {
             Image(systemName: "arrow.up.arrow.down")
                 .font(.caption)
-                .foregroundColor(Theme.textColor)
+                .foregroundStyle(Theme.textColor)
         }
     }
 }

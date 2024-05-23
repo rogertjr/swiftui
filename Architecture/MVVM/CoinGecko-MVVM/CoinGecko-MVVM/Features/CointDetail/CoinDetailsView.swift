@@ -50,7 +50,7 @@ private extension CoinDetailsView {
         HStack {
             Text(coin.symbol.uppercased())
                 .font(.headline)
-                .foregroundColor(Theme.textColor.opacity(0.5))
+                .foregroundStyle(Theme.textColor.opacity(0.5))
             
             VStack(alignment: .center) {
                 if let url = URL(string: coin.image) {
@@ -67,7 +67,7 @@ private extension CoinDetailsView {
                     Image(systemName: "number.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.orange)
+                        .foregroundStyle(.orange)
                 }
             }
             .frame(width: 25, height: 25)

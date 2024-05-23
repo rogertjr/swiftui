@@ -162,6 +162,8 @@ final class AppViewModel: ObservableObject {
 }
 
 
+
+// MARK: - Placeholder
 extension AppViewModel {
     private func preparePlaceholderData() {
         guard let mockedCoins = try? JSONMapper.decode(MockResultFiles.coinList.rawValue, type: [Coin].self) else { return }

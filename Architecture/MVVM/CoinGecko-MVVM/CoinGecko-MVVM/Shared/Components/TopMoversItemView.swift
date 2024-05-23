@@ -14,7 +14,7 @@ struct TopMoversItemView: View {
     
     // MARK: - Layout
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             VStack(alignment: .center) {
                 if let url = URL(string: coin.image) {
                     AsyncImage(url: url) { image in
@@ -22,20 +22,24 @@ struct TopMoversItemView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .ignoresSafeArea(.all)
-                            .clipped()
+//                            .clipped()
+                            .clipShape(Circle())
                     } placeholder: {
-                        Image(systemName: "number.circle.fill")
+                        Image(systemName: "bitcoinsign.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(Circle())
                             .redacted(reason: isLoading ? .placeholder : [])
                             .animatePlaceholder(isLoading: $isLoading)
                     }
                 } else {
-                    Image(systemName: "number.circle.fill")
+                    Image(systemName: "bitcoinsign.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.orange)
+                        .foregroundStyle(Theme.textColor)
                 }
             }
-            .frame(width: 32, height: 32)
+            .frame(width: 36, height: 36)
             .padding(.bottom, 8)
             
             HStack(spacing: 2) {
@@ -44,21 +48,25 @@ struct TopMoversItemView: View {
                 
                 Text(coin.currentPrice.toCurrencyString())
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.gray)
             }
             
             Text(coin.priceChangePercentage24H.toPercentString())
-                .font(.title2)
-                .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
+                .font(.title3)
+                .bold()
+                .lineLimit(1)
+                .minimumScaleFactor(0.3)
+                .foregroundStyle(coin.priceChangePercentage24H > 0 ? .green : .red)
+                .padding(.horizontal)
         }
-        .frame(width: 140, height: 140)
+        .frame(width: 128, height: 128)
         .background(Theme.itemBackground)
+        .redacted(reason: isLoading ? .placeholder : [])
+        .animatePlaceholder(isLoading: $isLoading)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(.systemGray4), lineWidth: 1)
         )
-        .redacted(reason: isLoading ? .placeholder : [])
-        .animatePlaceholder(isLoading: $isLoading)
     }
 }
 

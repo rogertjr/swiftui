@@ -27,7 +27,7 @@ struct AllCoinsView: View {
                 Text("Prices")
             }
             .font(.caption)
-            .foregroundColor(.gray)
+            .foregroundStyle(.gray)
             
             gridView
         }
@@ -53,8 +53,7 @@ private extension AllCoinsView {
                 }
             }
         } else if viewModel.searchedText != "" && viewModel.searchedCoins == nil  {
-            Text("No coins were found :(")
-                .font(.subheadline).bold()
+            ContentUnavailableView.search(text: viewModel.searchedText)
                 .deferredRendering(for: 0.8)
         } else {
             LazyVGrid(columns: columns, spacing: 4) {

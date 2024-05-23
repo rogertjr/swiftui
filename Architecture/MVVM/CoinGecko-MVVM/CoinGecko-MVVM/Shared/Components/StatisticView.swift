@@ -29,7 +29,7 @@ struct StatisticView: View {
                     Text(percentChange.toPercentString())
                         .font(.caption.bold())
                 }
-                .foregroundColor(percentChange > 0 ? .green : .red)
+                .foregroundStyle(percentChange > 0 ? .green : .red)
             }
         }
     }

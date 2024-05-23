@@ -17,7 +17,7 @@ struct CoinRowView: View {
         HStack {
             Text(coin.marketCapRank.toRankString())
                 .font(.caption)
-                .foregroundColor(.gray)
+                .foregroundStyle(.gray)
                         
             VStack(alignment: .center) {
                 if let url = URL(string: coin.image) {
@@ -26,16 +26,20 @@ struct CoinRowView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .ignoresSafeArea(.all)
-                                .clipped()
+                                .clipShape(Circle())
                         } placeholder: {
-                            Image(systemName: "number.circle.fill")
-                                .redacted(reason: .placeholder)
+                            Image(systemName: "bitcoinsign.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .redacted(reason: isLoading ? .placeholder : [])
+                                .animatePlaceholder(isLoading: $isLoading)
                         }
                 } else {
                     Image(systemName: "number.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.orange)
+                        .foregroundStyle(.orange)
                 }
             }
             .frame(width: 32, height: 32)
@@ -47,7 +51,7 @@ struct CoinRowView: View {
                 
                 Text(coin.symbol.uppercased())
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.gray)
                     .padding(.leading, 6)
             }
             .padding(.leading, 2)
@@ -61,7 +65,7 @@ struct CoinRowView: View {
                 
                 Text(coin.priceChangePercentage24H.toPercentString())
                     .font(.caption)
-                    .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
+                    .foregroundStyle(coin.priceChangePercentage24H > 0 ? .green : .red)
                     .padding(.leading, 6)
             }
         }
@@ -82,5 +86,6 @@ struct CoinRowView: View {
         CoinRowView(coin: coins.first!, isLoading: .constant(true))
         CoinRowView(coin: coins.first!, isLoading: .constant(false))
     }
+    .padding(.horizontal)
     .previewLayout(.sizeThatFits)
 }
