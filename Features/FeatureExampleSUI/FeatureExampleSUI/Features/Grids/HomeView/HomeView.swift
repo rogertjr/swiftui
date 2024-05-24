@@ -27,6 +27,7 @@ private extension HomeView {
             switch feature {
             case .charts: ChartsView()
             case .grid: GridView()
+            case .controls: ControlsView()
             }
         }
     }

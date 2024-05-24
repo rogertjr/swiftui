@@ -10,6 +10,7 @@ import Foundation
 enum Features: String, CaseIterable {
     case grid
     case charts
+    case controls
     
     var description: String {
         return self.rawValue.capitalized
@@ -21,6 +22,8 @@ enum Features: String, CaseIterable {
             return "square.grid.3x2"
         case .charts:
             return "chart.pie"
+        case .controls:
+            return "slider.horizontal.3"
         }
     }
 }

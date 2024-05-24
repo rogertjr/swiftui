@@ -26,6 +26,7 @@
 		D9FA7CF82BFFC9CC00B9EBF8 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CF72BFFC9CC00B9EBF8 /* ChartsView.swift */; };
 		D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */; };
 		D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */; };
+		D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFF2C00B51000B9EBF8 /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D9FA7CF72BFFC9CC00B9EBF8 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		D9FA7CFF2C00B51000B9EBF8 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,8 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D012C00BD8700B9EBF8 /* Buttons */,
+				D9FA7CFE2C00B50200B9EBF8 /* Controls */,
 				D9FA7CD62BFFAF1600B9EBF8 /* Features.swift */,
 				D9FA7CEE2BFFBC5800B9EBF8 /* Charts */,
 				D9FA7CE32BFFB6AD00B9EBF8 /* Grids */,
@@ -182,6 +186,21 @@
 				D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D9FA7CFE2C00B50200B9EBF8 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7CFF2C00B51000B9EBF8 /* ControlsView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		D9FA7D012C00BD8700B9EBF8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +283,7 @@
 				D9FA7CF42BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift in Sources */,
 				D9FA7CC72BFFAEAB00B9EBF8 /* HomeView.swift in Sources */,
 				D9FA7CE02BFFB34000B9EBF8 /* EmojiCellView.swift in Sources */,
+				D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */,
 				D9FA7CED2BFFBB9E00B9EBF8 /* ChartData.swift in Sources */,
 				D9FA7CDA2BFFB0BD00B9EBF8 /* LazyVGridView.swift in Sources */,
 				D9FA7CC52BFFAEAB00B9EBF8 /* FeatureExampleSUIApp.swift in Sources */,
