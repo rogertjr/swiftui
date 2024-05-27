@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 @main
 struct FeatureExampleSUIApp: App {
@@ -20,6 +21,11 @@ struct FeatureExampleSUIApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    init() {
+        // Configure Tip's data container
+        try? Tips.configure()
+    }
 
     var body: some Scene {
         WindowGroup {

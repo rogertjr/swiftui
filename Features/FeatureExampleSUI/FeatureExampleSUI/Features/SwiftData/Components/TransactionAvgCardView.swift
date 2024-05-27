@@ -11,6 +11,7 @@ struct TransactionAvgCardView: View {
     // MARK: - Properties
     var income: Double
     var expense: Double
+    var show: Bool
     private var total: Double { income - expense }
     
     // MARK: - Layout
@@ -24,6 +25,7 @@ struct TransactionAvgCardView: View {
                     Text("\(currencyString(total, maxDigits: 2))")
                         .font(.title.bold())
                         .foregroundStyle(Color.primary)
+                        .redacted(reason: show ? [] : .placeholder)
                     
                     Image(systemName: expense > income ? "chart.line.downtrend.xyaxis" : "chart.line.uptrend.xyaxis")
                         .font(.title3)
@@ -55,6 +57,7 @@ struct TransactionAvgCardView: View {
                                     .font(.callout)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(Color.primary)
+                                    .redacted(reason: show ? [] : .placeholder)
                             }
                             
                             if category == .income {
@@ -72,7 +75,8 @@ struct TransactionAvgCardView: View {
 
 #Preview {
     ScrollView {
-        TransactionAvgCardView(income: 321, expense: 123)
-            .previewLayout(.sizeThatFits)
+        TransactionAvgCardView(income: 321, expense: 123, show: true)
+        
+        TransactionAvgCardView(income: 123, expense: 321, show: false)
     }
 }

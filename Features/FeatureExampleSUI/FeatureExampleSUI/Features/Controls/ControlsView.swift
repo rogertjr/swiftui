@@ -33,6 +33,7 @@ struct ControlsView: View {
             pickerSection
         }
         .navigationTitle("Controls")
+        .toolbarRole(.editor)
         .scrollContentBackground(.hidden)
     }
 }

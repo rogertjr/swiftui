@@ -13,7 +13,7 @@ enum Category: String, CaseIterable {
     case expense = "Expense"
 }
 
-let appTint: Color = .blue
+let appTint: Color = .primary
 
 struct TintColor: Identifiable {
     let id: UUID = .init()

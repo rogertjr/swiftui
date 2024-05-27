@@ -20,6 +20,7 @@ struct TransactionView: View {
     @State private var dateAdded: Date = .now
     @State private var category: Category = .expense
     @State private var tint: TintColor = TintColor.tints.randomElement()!
+    private var isAbleToContinue: Bool { !title.isEmpty && !remarks.isEmpty }
     
     private var numberFormatter: NumberFormatter {
         let formatter = NumberFormatter()
@@ -32,17 +33,6 @@ struct TransactionView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 15) {
-                Text("Preview")
-                    .font(.caption)
-                    .foregroundStyle(.gray)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                TransactionCardView(transaction: .init(title: title.isEmpty ? "Title" : title,
-                                                       remarks: remarks.isEmpty ? "Remarks" : remarks,
-                                                       amount: amount,
-                                                       dateAdded: dateAdded,
-                                                       category: category,
-                                                       tintColor: tint))
                 customSection("Title", hint: "Title", value: $title)
                 customSection("Remarks", hint: "Remark", value: $remarks)
                 
@@ -65,7 +55,7 @@ struct TransactionView: View {
                         .background(.background, in: .rect(cornerRadius: 10))
                         .frame(maxWidth: 130)
                         
-                        customCategoryCheckbox()
+                        categoryRadioSelectView()
                     }
                 }
                 
@@ -84,11 +74,12 @@ struct TransactionView: View {
             }
             .padding(15)
         }
-        .navigationTitle("\(editTransaction != nil ? "Edit" : "Add") Transaction")
+        .navigationTitle(editTransaction != nil ? "Edit" : "Add")
         .background(.gray.opacity(0.15))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Save", action: save)
+                    .foregroundStyle(isAbleToContinue ? appTint : Color.gray)
             }
         }
         .onAppear {
@@ -103,7 +94,8 @@ struct TransactionView: View {
         }
     }
     
-    func save() {
+    // MARK: - Data Handler
+    private func save() {
         if editTransaction != nil {
             editTransaction?.title = title
             editTransaction?.remarks = remarks
@@ -111,6 +103,7 @@ struct TransactionView: View {
             editTransaction?.dateAdded = dateAdded
             editTransaction?.category = category.rawValue
         } else {
+            guard isAbleToContinue else { return }
             let newTransaction = Transaction(title: title,
                                              remarks: remarks,
                                              amount: amount,
@@ -136,12 +129,13 @@ private extension TransactionView {
             TextField(hint, text: value)
                 .padding(.horizontal, 15)
                 .padding(.vertical, 12)
+                .autocorrectionDisabled()
                 .background(.background, in: .rect(cornerRadius: 10))
         }
     }
     
     @ViewBuilder
-    func customCategoryCheckbox() -> some View {
+    func categoryRadioSelectView() -> some View {
         HStack(spacing: 10) {
             ForEach(Category.allCases, id: \.rawValue) { category in
                 HStack(spacing: 5) {

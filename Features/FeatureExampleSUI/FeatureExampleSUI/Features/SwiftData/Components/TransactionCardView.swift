@@ -31,20 +31,14 @@ struct TransactionCardView: View {
                     
                     Text(transaction.remarks)
                         .font(.caption)
-                        .foregroundStyle(.primary.secondary)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 2)
+                        .background(transaction.category == Category.income.rawValue ? Color.green.gradient : Color.red.gradient, in: .capsule)
                     
-                    Text(format(transaction.dateAdded, format: "dd MM yyyy"))
+                    Text(format(transaction.dateAdded, style: .medium))
                         .font(.caption2)
                         .foregroundStyle(.gray)
-                    
-                    if showCategory {
-                        Text(transaction.category)
-                            .font(.caption2)
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 5)
-                            .padding(.vertical, 2)
-                            .background(transaction.category == Category.income.rawValue ? Color.green.gradient : Color.red.gradient, in: .capsule)
-                    }
                 }
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -63,6 +57,7 @@ struct TransactionCardView: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try! ModelContainer(for: Transaction.self, configurations: config)

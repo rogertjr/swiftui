@@ -18,8 +18,10 @@ struct HomeView: View {
                                 content: { featureView(feat) })
                 }
             }
+            .navigationTitle("SwiftUI")
         }
-        .navigationTitle("SwiftUI")
+        .tint(appTint)
+        .foregroundStyle(appTint)
     }
 }
 
