@@ -56,6 +56,16 @@ struct PetData: Identifiable {
     let id = UUID()
     let year: Int
     let population: Double
+    
+    static var catData: [PetData] = [PetData(year: 2000, population: 6.8),
+                                     PetData(year: 2010, population: 8.2),
+                                     PetData(year: 2015, population: 12.9),
+                                     PetData(year: 2022, population: 15.2)]
+    
+    static var dogData: [PetData] = [PetData(year: 2000, population: 5),
+                                     PetData(year: 2010, population: 5.3),
+                                     PetData(year: 2015, population: 7.9),
+                                     PetData(year: 2022, population: 10.6)]
 }
 
 struct PetDataSeries: Identifiable {
@@ -63,13 +73,3 @@ struct PetDataSeries: Identifiable {
     let petData: [PetData]
     var id: String { type }
 }
-
-
-let catData: [PetData] = [PetData(year: 2000, population: 6.8),
-                          PetData(year: 2010, population: 8.2),
-                          PetData(year: 2015, population: 12.9),
-                          PetData(year: 2022, population: 15.2)]
-let dogData: [PetData] = [PetData(year: 2000, population: 5),
-                          PetData(year: 2010, population: 5.3),
-                          PetData(year: 2015, population: 7.9),
-                          PetData(year: 2022, population: 10.6)]

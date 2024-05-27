@@ -11,8 +11,8 @@ import Charts
 struct MultipleDataSeriesChartView: View {
     // MARK: - Properties
     var data: [PetDataSeries] {
-        [PetDataSeries(type: "cat", petData: catData),
-         PetDataSeries(type: "dog", petData: dogData)]
+        [PetDataSeries(type: "cat", petData: PetData.catData),
+         PetDataSeries(type: "dog", petData: PetData.dogData)]
     }
     
     let linearGradient = LinearGradient(
@@ -56,14 +56,14 @@ private extension MultipleDataSeriesChartView {
     
     var linearGradientSingleView: some View {
         Chart {
-            ForEach(catData) { data in
+            ForEach(PetData.catData) { data in
                 LineMark(x: .value("Year", data.year),
                          y: .value("Population", data.population))
             }
             .interpolationMethod(.cardinal)
             .symbol(by: .value("Pet type", "cat"))
             
-            ForEach(catData) { data in
+            ForEach(PetData.catData) { data in
                 AreaMark(x: .value("Year", data.year),
                          y: .value("Population", data.population))
             }

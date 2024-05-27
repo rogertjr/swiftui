@@ -27,6 +27,15 @@
 		D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */; };
 		D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */; };
 		D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7CFF2C00B51000B9EBF8 /* ControlsView.swift */; };
+		D9FA7D052C0117C600B9EBF8 /* ExpenseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */; };
+		D9FA7D092C011A4700B9EBF8 /* RecentTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D082C011A4700B9EBF8 /* RecentTransactionsView.swift */; };
+		D9FA7D0B2C011BDA00B9EBF8 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D0A2C011BDA00B9EBF8 /* TransactionView.swift */; };
+		D9FA7D0E2C011C5400B9EBF8 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D0D2C011C5400B9EBF8 /* TransactionCardView.swift */; };
+		D9FA7D112C011C8300B9EBF8 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D102C011C8300B9EBF8 /* Date+Ext.swift */; };
+		D9FA7D132C011C9800B9EBF8 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D122C011C9800B9EBF8 /* View+Ext.swift */; };
+		D9FA7D152C011D3900B9EBF8 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D142C011D3900B9EBF8 /* SwipeAction.swift */; };
+		D9FA7D172C011F6700B9EBF8 /* TransactionAvgCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D162C011F6700B9EBF8 /* TransactionAvgCardView.swift */; };
+		D9FA7D192C011FF300B9EBF8 /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,15 @@
 		D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		D9FA7CFF2C00B51000B9EBF8 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTracker.swift; sourceTree = "<group>"; };
+		D9FA7D082C011A4700B9EBF8 /* RecentTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsView.swift; sourceTree = "<group>"; };
+		D9FA7D0A2C011BDA00B9EBF8 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		D9FA7D0D2C011C5400B9EBF8 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		D9FA7D102C011C8300B9EBF8 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		D9FA7D122C011C9800B9EBF8 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		D9FA7D142C011D3900B9EBF8 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		D9FA7D162C011F6700B9EBF8 /* TransactionAvgCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAvgCardView.swift; sourceTree = "<group>"; };
+		D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +130,11 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7D012C00BD8700B9EBF8 /* Buttons */,
+				D9FA7D012C00BD8700B9EBF8 /* SwiftData */,
 				D9FA7CFE2C00B50200B9EBF8 /* Controls */,
 				D9FA7CD62BFFAF1600B9EBF8 /* Features.swift */,
 				D9FA7CEE2BFFBC5800B9EBF8 /* Charts */,
+				D9FA7CD42BFFAECD00B9EBF8 /* HomeView */,
 				D9FA7CE32BFFB6AD00B9EBF8 /* Grids */,
 			);
 			path = Features;
@@ -144,6 +163,7 @@
 				D9FA7CDC2BFFB0FE00B9EBF8 /* Emoji.swift */,
 				D9FA7CE82BFFB6DE00B9EBF8 /* Item.swift */,
 				D9FA7CEC2BFFBB9E00B9EBF8 /* ChartData.swift */,
+				D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +171,7 @@
 		D9FA7CDE2BFFB33300B9EBF8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D0F2C011C6800B9EBF8 /* Extensions */,
 				D9FA7CF92BFFD20800B9EBF8 /* Components */,
 				D9FA7CDF2BFFB34000B9EBF8 /* EmojiCellView.swift */,
 			);
@@ -162,7 +183,6 @@
 			children = (
 				D9FA7CE62BFFB6C900B9EBF8 /* GridView.swift */,
 				D9FA7CD82BFFB0AE00B9EBF8 /* LazyGrids */,
-				D9FA7CD42BFFAECD00B9EBF8 /* HomeView */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -184,6 +204,7 @@
 			children = (
 				D9FA7CFA2BFFD21400B9EBF8 /* ItemRowView.swift */,
 				D9FA7CFC2BFFD25800B9EBF8 /* GroupView.swift */,
+				D9FA7D142C011D3900B9EBF8 /* SwipeAction.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,11 +217,33 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		D9FA7D012C00BD8700B9EBF8 /* Buttons */ = {
+		D9FA7D012C00BD8700B9EBF8 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D0C2C011C4800B9EBF8 /* Components */,
+				D9FA7D082C011A4700B9EBF8 /* RecentTransactionsView.swift */,
+				D9FA7D0A2C011BDA00B9EBF8 /* TransactionView.swift */,
 			);
-			path = Buttons;
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		D9FA7D0C2C011C4800B9EBF8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D0D2C011C5400B9EBF8 /* TransactionCardView.swift */,
+				D9FA7D162C011F6700B9EBF8 /* TransactionAvgCardView.swift */,
+				D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D9FA7D0F2C011C6800B9EBF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D102C011C8300B9EBF8 /* Date+Ext.swift */,
+				D9FA7D122C011C9800B9EBF8 /* View+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FA7D052C0117C600B9EBF8 /* ExpenseTracker.swift in Sources */,
 				D9FA7CF62BFFC84500B9EBF8 /* PieChartView.swift in Sources */,
+				D9FA7D112C011C8300B9EBF8 /* Date+Ext.swift in Sources */,
+				D9FA7D172C011F6700B9EBF8 /* TransactionAvgCardView.swift in Sources */,
+				D9FA7D0E2C011C5400B9EBF8 /* TransactionCardView.swift in Sources */,
 				D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */,
+				D9FA7D152C011D3900B9EBF8 /* SwipeAction.swift in Sources */,
 				D9FA7CDD2BFFB0FE00B9EBF8 /* Emoji.swift in Sources */,
+				D9FA7D192C011FF300B9EBF8 /* FilterTransactionView.swift in Sources */,
+				D9FA7D0B2C011BDA00B9EBF8 /* TransactionView.swift in Sources */,
 				D9FA7CF82BFFC9CC00B9EBF8 /* ChartsView.swift in Sources */,
 				D9FA7CE92BFFB6DE00B9EBF8 /* Item.swift in Sources */,
 				D9FA7CD72BFFAF1600B9EBF8 /* Features.swift in Sources */,
@@ -286,10 +336,12 @@
 				D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */,
 				D9FA7CED2BFFBB9E00B9EBF8 /* ChartData.swift in Sources */,
 				D9FA7CDA2BFFB0BD00B9EBF8 /* LazyVGridView.swift in Sources */,
+				D9FA7D132C011C9800B9EBF8 /* View+Ext.swift in Sources */,
 				D9FA7CC52BFFAEAB00B9EBF8 /* FeatureExampleSUIApp.swift in Sources */,
 				D9FA7CF22BFFC17700B9EBF8 /* HeatChartView.swift in Sources */,
 				D9FA7CE22BFFB4FA00B9EBF8 /* LazyHGridView.swift in Sources */,
 				D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */,
+				D9FA7D092C011A4700B9EBF8 /* RecentTransactionsView.swift in Sources */,
 				D9FA7CF02BFFBC6200B9EBF8 /* BarChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

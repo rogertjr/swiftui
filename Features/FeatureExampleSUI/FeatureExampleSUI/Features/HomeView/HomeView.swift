@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - UI Elements
     var body: some View {
-        List {
-            ForEach(Features.allCases, id: \.self) { feat in
-                ItemRowView(title: feat.description,
-                            icon: feat.iconName,
-                            content: { featureView(feat) })
+        NavigationStack {        
+            List {
+                ForEach(Features.allCases, id: \.self) { feat in
+                    ItemRowView(title: feat.description,
+                                icon: feat.iconName,
+                                content: { featureView(feat) })
+                }
             }
         }
         .navigationTitle("SwiftUI")
@@ -28,6 +30,7 @@ private extension HomeView {
             case .charts: ChartsView()
             case .grid: GridView()
             case .controls: ControlsView()
+            case .swiftData: RecentTransactionsView()
             }
         }
     }

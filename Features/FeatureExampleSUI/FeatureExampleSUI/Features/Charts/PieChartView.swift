@@ -11,10 +11,10 @@ import Charts
 struct PieChartView: View {
     // MARK: - Properties
     var catTotal: Double {
-        catData.reduce(0) { $0 + $1.population }
+        PetData.catData.reduce(0) { $0 + $1.population }
     }
     var dogTotal: Double {
-        dogData.reduce(0) { $0 + $1.population }
+        PetData.dogData.reduce(0) { $0 + $1.population }
     }
     
     var data: [(type: String, amount: Double)] {

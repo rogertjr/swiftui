@@ -11,6 +11,7 @@ enum Features: String, CaseIterable {
     case grid
     case charts
     case controls
+    case swiftData
     
     var description: String {
         return self.rawValue.capitalized
@@ -24,6 +25,8 @@ enum Features: String, CaseIterable {
             return "chart.pie"
         case .controls:
             return "slider.horizontal.3"
+        case .swiftData:
+            return "cube.box.fill"
         }
     }
 }
