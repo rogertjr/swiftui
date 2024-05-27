@@ -42,6 +42,7 @@ struct ChartsView: View {
                 }
             }
         }
+        .padding(.horizontal)
         .toolbarRole(.editor)
     }
 }

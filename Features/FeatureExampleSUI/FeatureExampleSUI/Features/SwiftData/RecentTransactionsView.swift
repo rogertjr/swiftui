@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import TipKit
 
 // MARK: - View Extension
 private extension View {
@@ -138,6 +137,11 @@ private extension RecentTransactionsView {
         var onSubmit: (Date, Date) -> Void
         var onClose: () -> Void
         
+        @Environment(\.colorScheme) var colorScheme
+        private var buttonColor: Color {
+            colorScheme == .dark ? Color.black : Color.white
+        }
+        
         // MARK: - Layout
         var body: some View {
             VStack(spacing: 15) {
@@ -153,7 +157,7 @@ private extension RecentTransactionsView {
                     Button("Filter") { onSubmit(start, end) }
                         .buttonStyle(.borderedProminent)
                         .buttonBorderShape(.roundedRectangle(radius: 5))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(buttonColor)
                         .tint(appTint)
                 }
                 .padding(.top, 10)
@@ -180,34 +184,4 @@ private extension RecentTransactionsView {
     NavigationStack {
         RecentTransactionsView()
     }
-}
-
-// MARK: - Tip
-struct AddTransactionTip: Tip {
-    @Parameter
-    static var showTip: Bool = false
-    static var numberOfTimesVisited: Event = Event(id: "xyz.swiftui.tip.event.numberoftimesvisited")
-    
-    var title: Text {
-        Text("Try to add a transaction")
-    }
-    
-    var message: Text? {
-        Text("You can add an item by tapping on the plus icon")
-    }
-    
-    var asset: Image? {
-        Image(systemName: "lightbulb")
-    }
-    
-    var options: [TipOption] {
-        return [
-            // Indicated the number of times that the tip will be present before be invalidated
-            Tips.MaxDisplayCount(2)
-        ]
-    }
-    
-    var rules: [Rule] {
-        return [#Rule(Self.$showTip) { $0 == true }]
-    }
-}
+} 

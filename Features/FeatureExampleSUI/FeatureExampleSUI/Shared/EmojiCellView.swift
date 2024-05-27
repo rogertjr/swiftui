@@ -15,7 +15,7 @@ struct EmojiCellView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
-                .fill(Color(white: 0.9))
+                .fill(Color(UIColor.systemGroupedBackground))
             Text(emoji.emojiString)
                 .font(.system(size: 40))
                 .padding()

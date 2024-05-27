@@ -155,9 +155,7 @@ private extension TransactionView {
                         .font(.caption)
                 }
                 .contentShape(.rect)
-                .onTapGesture {
-                    self.category = category
-                }
+                .onTapGesture { self.category = category }
             }
         }
         .padding(.horizontal, 15)

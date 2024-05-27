@@ -31,6 +31,7 @@ private extension HomeView {
             switch feature {
             case .charts: ChartsView()
             case .grid: GridView()
+            case .buttons: ButtonsView()
             case .controls: ControlsView()
             case .swiftData: RecentTransactionsView()
             }

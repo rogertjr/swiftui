@@ -36,6 +36,8 @@
 		D9FA7D152C011D3900B9EBF8 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D142C011D3900B9EBF8 /* SwipeAction.swift */; };
 		D9FA7D172C011F6700B9EBF8 /* TransactionAvgCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D162C011F6700B9EBF8 /* TransactionAvgCardView.swift */; };
 		D9FA7D192C011FF300B9EBF8 /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */; };
+		D9FA7D1C2C04FE5800B9EBF8 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D1B2C04FE5800B9EBF8 /* ButtonsView.swift */; };
+		D9FA7D1F2C050AF500B9EBF8 /* AddTransactionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D1E2C050AF500B9EBF8 /* AddTransactionTip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		D9FA7D142C011D3900B9EBF8 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		D9FA7D162C011F6700B9EBF8 /* TransactionAvgCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAvgCardView.swift; sourceTree = "<group>"; };
 		D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
+		D9FA7D1B2C04FE5800B9EBF8 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		D9FA7D1E2C050AF500B9EBF8 /* AddTransactionTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionTip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D1A2C04FE5100B9EBF8 /* Buttons */,
 				D9FA7D012C00BD8700B9EBF8 /* SwiftData */,
 				D9FA7CFE2C00B50200B9EBF8 /* Controls */,
 				D9FA7CD62BFFAF1600B9EBF8 /* Features.swift */,
@@ -171,6 +176,7 @@
 		D9FA7CDE2BFFB33300B9EBF8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D1D2C050AEA00B9EBF8 /* Tips */,
 				D9FA7D0F2C011C6800B9EBF8 /* Extensions */,
 				D9FA7CF92BFFD20800B9EBF8 /* Components */,
 				D9FA7CDF2BFFB34000B9EBF8 /* EmojiCellView.swift */,
@@ -244,6 +250,22 @@
 				D9FA7D122C011C9800B9EBF8 /* View+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D9FA7D1A2C04FE5100B9EBF8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D1B2C04FE5800B9EBF8 /* ButtonsView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D9FA7D1D2C050AEA00B9EBF8 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D1E2C050AF500B9EBF8 /* AddTransactionTip.swift */,
+			);
+			path = Tips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +356,9 @@
 				D9FA7CC72BFFAEAB00B9EBF8 /* HomeView.swift in Sources */,
 				D9FA7CE02BFFB34000B9EBF8 /* EmojiCellView.swift in Sources */,
 				D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */,
+				D9FA7D1C2C04FE5800B9EBF8 /* ButtonsView.swift in Sources */,
 				D9FA7CED2BFFBB9E00B9EBF8 /* ChartData.swift in Sources */,
+				D9FA7D1F2C050AF500B9EBF8 /* AddTransactionTip.swift in Sources */,
 				D9FA7CDA2BFFB0BD00B9EBF8 /* LazyVGridView.swift in Sources */,
 				D9FA7D132C011C9800B9EBF8 /* View+Ext.swift in Sources */,
 				D9FA7CC52BFFAEAB00B9EBF8 /* FeatureExampleSUIApp.swift in Sources */,

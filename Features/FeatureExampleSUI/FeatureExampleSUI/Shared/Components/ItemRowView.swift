@@ -15,10 +15,7 @@ struct ItemRowView<Content: View>: View {
     
     // MARK: - UI Elements
     var body: some View {
-        NavigationLink {
-            content()
-                .padding(.horizontal)
-        } label: {
+        NavigationLink { content() } label: {
             Label(title, systemImage: icon)
                 .font(.headline)
                 .padding(.vertical, 8)

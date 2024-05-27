@@ -52,6 +52,7 @@ struct GridView: View {
             }
         }
         .navigationTitle("Grids")
+        .padding(.horizontal)
         .toolbarRole(.editor)
     }
 }

@@ -11,6 +11,7 @@ extension View {
     func format(_ date: Date, style: DateFormatter.Style) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = style
+        formatter.locale = .autoupdatingCurrent
         return formatter.string(from: date)
     }
     
@@ -22,7 +23,7 @@ extension View {
     }
     
     var currencySymbol: String {
-        let locale = Locale.current
+        let locale = Locale.autoupdatingCurrent
         return locale.currencySymbol ?? ""
     }
 }
