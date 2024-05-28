@@ -38,6 +38,8 @@
 		D9FA7D192C011FF300B9EBF8 /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */; };
 		D9FA7D1C2C04FE5800B9EBF8 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D1B2C04FE5800B9EBF8 /* ButtonsView.swift */; };
 		D9FA7D1F2C050AF500B9EBF8 /* AddTransactionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D1E2C050AF500B9EBF8 /* AddTransactionTip.swift */; };
+		D9FA7D222C05104B00B9EBF8 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D212C05104B00B9EBF8 /* OnboardingPage.swift */; };
+		D9FA7D242C051F7C00B9EBF8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D232C051F7C00B9EBF8 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		D9FA7D182C011FF300B9EBF8 /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
 		D9FA7D1B2C04FE5800B9EBF8 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		D9FA7D1E2C050AF500B9EBF8 /* AddTransactionTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionTip.swift; sourceTree = "<group>"; };
+		D9FA7D212C05104B00B9EBF8 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		D9FA7D232C051F7C00B9EBF8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D202C05103E00B9EBF8 /* Onboarding */,
 				D9FA7D1A2C04FE5100B9EBF8 /* Buttons */,
 				D9FA7D012C00BD8700B9EBF8 /* SwiftData */,
 				D9FA7CFE2C00B50200B9EBF8 /* Controls */,
@@ -169,6 +174,7 @@
 				D9FA7CE82BFFB6DE00B9EBF8 /* Item.swift */,
 				D9FA7CEC2BFFBB9E00B9EBF8 /* ChartData.swift */,
 				D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */,
+				D9FA7D212C05104B00B9EBF8 /* OnboardingPage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +274,14 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
+		D9FA7D202C05103E00B9EBF8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D232C051F7C00B9EBF8 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,6 +372,7 @@
 				D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */,
 				D9FA7D1C2C04FE5800B9EBF8 /* ButtonsView.swift in Sources */,
 				D9FA7CED2BFFBB9E00B9EBF8 /* ChartData.swift in Sources */,
+				D9FA7D242C051F7C00B9EBF8 /* OnboardingView.swift in Sources */,
 				D9FA7D1F2C050AF500B9EBF8 /* AddTransactionTip.swift in Sources */,
 				D9FA7CDA2BFFB0BD00B9EBF8 /* LazyVGridView.swift in Sources */,
 				D9FA7D132C011C9800B9EBF8 /* View+Ext.swift in Sources */,
@@ -367,6 +382,7 @@
 				D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */,
 				D9FA7D092C011A4700B9EBF8 /* RecentTransactionsView.swift in Sources */,
 				D9FA7CF02BFFBC6200B9EBF8 /* BarChartsView.swift in Sources */,
+				D9FA7D222C05104B00B9EBF8 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

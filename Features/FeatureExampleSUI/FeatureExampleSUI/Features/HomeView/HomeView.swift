@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    // MARK: - Properties
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
     // MARK: - UI Elements
     var body: some View {
         NavigationStack {        
@@ -19,6 +22,17 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("SwiftUI")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing, content: {
+                    Button(action: { isOnboarding = true }, label: {
+                        Image(systemName: "info.circle")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(appTint)
+                            .frame(width: 45, height: 45)
+                    })
+                })
+            }
         }
         .tint(appTint)
         .foregroundStyle(appTint)
@@ -43,5 +57,6 @@ private extension HomeView {
 #Preview {
     NavigationStack {
         HomeView()
+            .preferredColorScheme(.dark)
     }
 }

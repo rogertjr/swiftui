@@ -11,6 +11,9 @@ import TipKit
 
 @main
 struct FeatureExampleSUIApp: App {
+    // MARK: - Properties
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([Transaction.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
@@ -22,14 +25,22 @@ struct FeatureExampleSUIApp: App {
         }
     }()
     
+    // MARK: - Init
     init() {
-        // Configure Tip's data container
         try? Tips.configure()
     }
 
+    // MARK: - Layout
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            Group {
+                if isOnboarding {
+                    OnboardingView()
+                } else {
+                    HomeView()
+                }
+            }
+            .preferredColorScheme(.dark)
         }
         .modelContainer(sharedModelContainer)
     }
