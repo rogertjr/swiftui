@@ -5,6 +5,6 @@ This repository contains various examples demonstrating the usage of Swift progr
 # Examples
 - [AsyncAwait + MVVM](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/MVVM-Architecture)
 - [Charts](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Features/Charts)
-- [Combine] WIP
+- [Combine + MVVM](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Features/Combine)
 - [Observation] WIP
 - [SwiftData](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Features/SwiftData)
