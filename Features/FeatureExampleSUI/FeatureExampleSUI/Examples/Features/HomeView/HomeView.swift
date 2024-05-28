@@ -15,12 +15,24 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {        
             List {
-                ForEach(Features.allCases, id: \.self) { feat in
-                    ItemRowView(title: feat.description,
-                                icon: feat.iconName,
-                                content: { featureView(feat) })
+                Section("Features") {
+                    ForEach(Features.allCases, id: \.self) { feat in
+                        ItemRowView(title: feat.description,
+                                    icon: feat.iconName,
+                                    content: { featureView(feat) })
+                    }
                 }
+                .headerProminence(.increased)
+                
+                Section("Architecture") {
+                    ForEach(Architecture.allCases, id: \.self) { arch in
+                        ItemRowView(title: arch.description,
+                                    icon: arch.iconName) { architectureView(arch) }
+                    }
+                }
+                .headerProminence(.increased)
             }
+            .listStyle(.insetGrouped)
             .navigationTitle("SwiftUI")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing, content: {
@@ -48,6 +60,14 @@ private extension HomeView {
             case .buttons: ButtonsView()
             case .controls: ControlsView()
             case .swiftData: RecentTransactionsView()
+            }
+        }
+    }
+    
+    func architectureView(_ architecture: Architecture) -> some View {
+        VStack {
+            switch architecture {
+            case .mvvm: MVVMHomeView()
             }
         }
     }

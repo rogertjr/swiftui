@@ -20,4 +20,22 @@ extension Date {
         
         return calendar.date(byAdding: .init(month: 1, minute: -1), to: self.startOfMonth) ?? self
     }
+    
+    /// "2022-12-15T00:08:59.307Z"
+    init(_ string: String) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = formatter.date(from: string) ?? Date()
+        self.init(timeInterval: 0, since: date)
+    }
+    
+    private var shortDateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd"
+        return formatter
+    }
+    
+    func asShortDateString() -> String {
+        return shortDateFormatter.string(from: self)
+    }
 }

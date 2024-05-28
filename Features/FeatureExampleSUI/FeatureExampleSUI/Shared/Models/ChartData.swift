@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct CryptoChartData: Identifiable {
+    let id = UUID().uuidString
+    let date: Date
+    let value: Double
+}
+
 struct ChartData: Identifiable, Equatable {
     let type: String
     let count: Int

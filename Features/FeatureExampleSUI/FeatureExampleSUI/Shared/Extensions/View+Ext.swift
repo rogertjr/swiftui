@@ -26,4 +26,12 @@ extension View {
         let locale = Locale.autoupdatingCurrent
         return locale.currencySymbol ?? ""
     }
+    
+    func deferredRendering(for seconds: Double) -> some View {
+        modifier(DeferredViewModifier(threshold: seconds))
+    }
+    
+    func animatePlaceholder(isLoading: Binding<Bool>) -> some View {
+        modifier(AnimatePlaceholderModifier(isLoading: isLoading))
+    }
 }
