@@ -13,6 +13,7 @@ enum Features: String, CaseIterable {
     case controls
     case buttons
     case swiftData
+    case combine
     
     var description: String { return self.rawValue.capitalized }
     
@@ -23,6 +24,7 @@ enum Features: String, CaseIterable {
         case .buttons: return "capsule"
         case .controls: return "slider.horizontal.3"
         case .swiftData: return "cube.box.fill"
+        case .combine: return "hare"
         }
     }
 }

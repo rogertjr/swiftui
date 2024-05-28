@@ -70,6 +70,14 @@
 		D9FA7DA02C063A2500B9EBF8 /* CoinService+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D9D2C063A2500B9EBF8 /* CoinService+Ext.swift */; };
 		D9FA7DA12C063A2500B9EBF8 /* CoinApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D9E2C063A2500B9EBF8 /* CoinApi.swift */; };
 		D9FA7DA32C063A3E00B9EBF8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DA22C063A3E00B9EBF8 /* Theme.swift */; };
+		D9FA7DAD2C06516400B9EBF8 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DAC2C06516400B9EBF8 /* ApiError.swift */; };
+		D9FA7DAF2C06517B00B9EBF8 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DAE2C06517B00B9EBF8 /* NewsApi.swift */; };
+		D9FA7DB22C0651AE00B9EBF8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DB12C0651AE00B9EBF8 /* Article.swift */; };
+		D9FA7DB42C0651D400B9EBF8 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DB32C0651D400B9EBF8 /* NewsService.swift */; };
+		D9FA7DB82C06523300B9EBF8 /* CombineHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DB72C06523300B9EBF8 /* CombineHomeView.swift */; };
+		D9FA7DBA2C06525400B9EBF8 /* CombineHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DB92C06525400B9EBF8 /* CombineHomeViewModel.swift */; };
+		D9FA7DBD2C0652B400B9EBF8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DBC2C0652B400B9EBF8 /* ErrorView.swift */; };
+		D9FA7DC02C06530500B9EBF8 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DBF2C06530500B9EBF8 /* ArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +145,14 @@
 		D9FA7D9D2C063A2500B9EBF8 /* CoinService+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoinService+Ext.swift"; sourceTree = "<group>"; };
 		D9FA7D9E2C063A2500B9EBF8 /* CoinApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinApi.swift; sourceTree = "<group>"; };
 		D9FA7DA22C063A3E00B9EBF8 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D9FA7DAC2C06516400B9EBF8 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		D9FA7DAE2C06517B00B9EBF8 /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		D9FA7DB12C0651AE00B9EBF8 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D9FA7DB32C0651D400B9EBF8 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		D9FA7DB72C06523300B9EBF8 /* CombineHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeView.swift; sourceTree = "<group>"; };
+		D9FA7DB92C06525400B9EBF8 /* CombineHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeViewModel.swift; sourceTree = "<group>"; };
+		D9FA7DBC2C0652B400B9EBF8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D9FA7DBF2C06530500B9EBF8 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +214,7 @@
 		D9FA7CD32BFFAECA00B9EBF8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7DA72C064DF000B9EBF8 /* Combine */,
 				D9FA7D202C05103E00B9EBF8 /* Onboarding */,
 				D9FA7D1A2C04FE5100B9EBF8 /* Buttons */,
 				D9FA7D012C00BD8700B9EBF8 /* SwiftData */,
@@ -476,6 +493,69 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		D9FA7DA72C064DF000B9EBF8 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DB52C06521F00B9EBF8 /* View */,
+				D9FA7DAA2C06511800B9EBF8 /* Service */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		D9FA7DAA2C06511800B9EBF8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DB02C0651A300B9EBF8 /* Model */,
+				D9FA7DAC2C06516400B9EBF8 /* ApiError.swift */,
+				D9FA7DAE2C06517B00B9EBF8 /* NewsApi.swift */,
+				D9FA7DB32C0651D400B9EBF8 /* NewsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D9FA7DB02C0651A300B9EBF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DB12C0651AE00B9EBF8 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9FA7DB52C06521F00B9EBF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DBE2C0652FD00B9EBF8 /* Article */,
+				D9FA7DBB2C0652A600B9EBF8 /* Error */,
+				D9FA7DB62C06522400B9EBF8 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9FA7DB62C06522400B9EBF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DB72C06523300B9EBF8 /* CombineHomeView.swift */,
+				D9FA7DB92C06525400B9EBF8 /* CombineHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D9FA7DBB2C0652A600B9EBF8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DBC2C0652B400B9EBF8 /* ErrorView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D9FA7DBE2C0652FD00B9EBF8 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DBF2C06530500B9EBF8 /* ArticleView.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,9 +633,12 @@
 				D9FA7D792C06399700B9EBF8 /* HapticManager.swift in Sources */,
 				D9FA7D9F2C063A2500B9EBF8 /* CoinService.swift in Sources */,
 				D9FA7DA02C063A2500B9EBF8 /* CoinService+Ext.swift in Sources */,
+				D9FA7DB82C06523300B9EBF8 /* CombineHomeView.swift in Sources */,
 				D9FA7D992C063A1900B9EBF8 /* CoinDetailsView.swift in Sources */,
 				D9FA7D832C0639AD00B9EBF8 /* CoinRowView.swift in Sources */,
+				D9FA7DAD2C06516400B9EBF8 /* ApiError.swift in Sources */,
 				D9FA7D172C011F6700B9EBF8 /* TransactionAvgCardView.swift in Sources */,
+				D9FA7DBA2C06525400B9EBF8 /* CombineHomeViewModel.swift in Sources */,
 				D9FA7D802C0639AD00B9EBF8 /* AllCoinsView.swift in Sources */,
 				D9FA7D0E2C011C5400B9EBF8 /* TransactionCardView.swift in Sources */,
 				D9FA7CFD2BFFD25800B9EBF8 /* GroupView.swift in Sources */,
@@ -572,15 +655,18 @@
 				D9FA7D882C0639CF00B9EBF8 /* ViewState.swift in Sources */,
 				D9FA7CE72BFFB6C900B9EBF8 /* GridView.swift in Sources */,
 				D9FA7D8F2C0639E200B9EBF8 /* Coin.swift in Sources */,
+				D9FA7DB42C0651D400B9EBF8 /* NewsService.swift in Sources */,
 				D9FA7CF42BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift in Sources */,
 				D9FA7CC72BFFAEAB00B9EBF8 /* HomeView.swift in Sources */,
 				D9FA7D852C0639AD00B9EBF8 /* TopMoversView.swift in Sources */,
 				D9FA7D892C0639CF00B9EBF8 /* Sort.swift in Sources */,
 				D9FA7CE02BFFB34000B9EBF8 /* EmojiCellView.swift in Sources */,
+				D9FA7DAF2C06517B00B9EBF8 /* NewsApi.swift in Sources */,
 				D9FA7D002C00B51000B9EBF8 /* ControlsView.swift in Sources */,
 				D9FA7D942C063A0300B9EBF8 /* Int+Ext.swift in Sources */,
 				D9FA7D1C2C04FE5800B9EBF8 /* ButtonsView.swift in Sources */,
 				D9FA7DA32C063A3E00B9EBF8 /* Theme.swift in Sources */,
+				D9FA7DC02C06530500B9EBF8 /* ArticleView.swift in Sources */,
 				D9FA7CED2BFFBB9E00B9EBF8 /* ChartData.swift in Sources */,
 				D9FA7D242C051F7C00B9EBF8 /* OnboardingView.swift in Sources */,
 				D9FA7D1F2C050AF500B9EBF8 /* AddTransactionTip.swift in Sources */,
@@ -601,12 +687,14 @@
 				D9FA7D092C011A4700B9EBF8 /* RecentTransactionsView.swift in Sources */,
 				D9FA7D772C06398600B9EBF8 /* MockResultFiles.swift in Sources */,
 				D9FA7CF02BFFBC6200B9EBF8 /* BarChartsView.swift in Sources */,
+				D9FA7DB22C0651AE00B9EBF8 /* Article.swift in Sources */,
 				D9FA7D982C063A1900B9EBF8 /* CoinDetailSectionView.swift in Sources */,
 				D9FA7D822C0639AD00B9EBF8 /* LineChartView.swift in Sources */,
 				D9FA7D702C06397200B9EBF8 /* AnimatePlaceholderModifier.swift in Sources */,
 				D9FA7DA12C063A2500B9EBF8 /* CoinApi.swift in Sources */,
 				D9FA7D222C05104B00B9EBF8 /* OnboardingPage.swift in Sources */,
 				D9FA7D652C06376400B9EBF8 /* MVVMHomeView.swift in Sources */,
+				D9FA7DBD2C0652B400B9EBF8 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,6 +60,7 @@ private extension HomeView {
             case .buttons: ButtonsView()
             case .controls: ControlsView()
             case .swiftData: RecentTransactionsView()
+            case .combine: CombineHomeView()
             }
         }
     }

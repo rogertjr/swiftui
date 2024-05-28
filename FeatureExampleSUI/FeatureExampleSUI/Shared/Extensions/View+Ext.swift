@@ -15,6 +15,14 @@ extension View {
         return formatter.string(from: date)
     }
     
+    func format(_ date: Date, dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = dateStyle
+        formatter.timeStyle = timeStyle
+        formatter.doesRelativeDateFormatting = true
+        return formatter.string(from: date)
+    }
+    
     func currencyString(_ value: Double, maxDigits: Int = 2) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
