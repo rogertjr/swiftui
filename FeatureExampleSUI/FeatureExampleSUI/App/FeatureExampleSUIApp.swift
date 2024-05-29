@@ -15,11 +15,12 @@ struct FeatureExampleSUIApp: App {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
     
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([Transaction.self])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        let transactionConfig = ModelConfiguration(for: Transaction.self, isStoredInMemoryOnly: true)
+        let workEventConfig = ModelConfiguration(for: WorkEvent.self)
+        
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try ModelContainer(for: Transaction.self, WorkEvent.self,
+                                      configurations: transactionConfig, workEventConfig)
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }

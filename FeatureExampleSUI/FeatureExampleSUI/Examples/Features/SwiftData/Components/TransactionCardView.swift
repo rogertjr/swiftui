@@ -13,6 +13,7 @@ struct TransactionCardView: View {
     @Environment(\.modelContext) private var modelContext
     var transaction: Transaction
     var showCategory: Bool = false
+    var showData: Bool
     
     // MARK: - Layout
     var body: some View {
@@ -45,6 +46,7 @@ struct TransactionCardView: View {
                 
                 Text(currencyString(transaction.amount, maxDigits: 2))
                     .fontWeight(.semibold)
+                    .redacted(reason: showData ? [] : .placeholder)
             }
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
@@ -59,8 +61,8 @@ struct TransactionCardView: View {
 
 // MARK: - Preview
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try! ModelContainer(for: Transaction.self, configurations: config)
+        let container = try! ModelContainer(for: Transaction.self,
+                                            configurations: .init(for: Transaction.self, isStoredInMemoryOnly: true))
 
         let transaction = Transaction(title: "AirPods",
                                       remarks: "Apple Product",
@@ -70,7 +72,7 @@ struct TransactionCardView: View {
                                       tintColor: .init(color: "Red", value: .red))
         container.mainContext.insert(transaction)
         
-        return TransactionCardView(transaction: transaction)
+        return TransactionCardView(transaction: transaction, showData: true)
             .modelContainer(container)
             .previewLayout(.sizeThatFits)
 }

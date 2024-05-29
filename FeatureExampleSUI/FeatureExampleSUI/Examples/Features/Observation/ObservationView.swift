@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ObservationView: View { 
     var body: some View {
-        Text("Hello")
+        Text("WIP")
     }
 }
 

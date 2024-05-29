@@ -84,6 +84,7 @@
 		D9FA7DCC2C06700A00B9EBF8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DCB2C06700A00B9EBF8 /* Movie.swift */; };
 		D9FA7DCE2C06703B00B9EBF8 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DCD2C06703B00B9EBF8 /* MovieDetailView.swift */; };
 		D9FA7DD02C0670FE00B9EBF8 /* MVPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */; };
+		D9FA7DD42C0758F900B9EBF8 /* CleanPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		D9FA7DCD2C06703B00B9EBF8 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPatternView.swift; sourceTree = "<group>"; };
 		D9FA7DD12C0753E600B9EBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPatternView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +400,7 @@
 		D9FA7D262C06352A00B9EBF8 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7DD22C0758EB00B9EBF8 /* Clean-Architecture */,
 				D9FA7DC42C066B9500B9EBF8 /* MV-Architecture */,
 				D9FA7D252C06351700B9EBF8 /* MVVM-Architecture */,
 				D9FA7CD32BFFAECA00B9EBF8 /* Features */,
@@ -608,6 +611,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D9FA7DD22C0758EB00B9EBF8 /* Clean-Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */,
+			);
+			path = "Clean-Architecture";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -749,6 +760,7 @@
 				D9FA7D982C063A1900B9EBF8 /* CoinDetailSectionView.swift in Sources */,
 				D9FA7D822C0639AD00B9EBF8 /* LineChartView.swift in Sources */,
 				D9FA7D702C06397200B9EBF8 /* AnimatePlaceholderModifier.swift in Sources */,
+				D9FA7DD42C0758F900B9EBF8 /* CleanPatternView.swift in Sources */,
 				D9FA7DA12C063A2500B9EBF8 /* CoinApi.swift in Sources */,
 				D9FA7D222C05104B00B9EBF8 /* OnboardingPage.swift in Sources */,
 				D9FA7D652C06376400B9EBF8 /* MVVMHomeView.swift in Sources */,

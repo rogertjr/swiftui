@@ -71,7 +71,7 @@ private extension HomeView {
             switch architecture {
             case .mvvm: MVVMHomeView()
             case .mv: MVPatternView()
-            case .clean: EmptyView()
+            case .clean: CleanPatternView()
             }
         }
     }

@@ -52,7 +52,9 @@ struct RecentTransactionsView: View {
                 } else {
                     ForEach(transactions.filter({ $0.category == selectedCategory.rawValue })) { transaction in
                         NavigationLink(destination: { TransactionView(editTransaction: transaction) },
-                                       label: { TransactionCardView(transaction: transaction) })
+                                       label: {
+                            TransactionCardView(transaction: transaction, showData: showData)
+                        })
                         .buttonStyle(.plain)
                     }
                 }
