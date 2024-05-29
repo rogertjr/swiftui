@@ -23,7 +23,7 @@ struct CombineHomeView: View {
                             fetchUrl(item.url)
                         }
                 }
-            case .failed(let error):
+            case .failure(let error):
                 ErrorView(error: error) {
                     combineViewModel.getArticles()
                 }

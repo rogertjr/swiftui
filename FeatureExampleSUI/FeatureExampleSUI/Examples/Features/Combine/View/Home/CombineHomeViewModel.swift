@@ -37,7 +37,7 @@ class CombineHomeViewModel: ObservableObject {
                     self.state = .success(content: self.articles)
                     break
                 case .failure(let error):
-                    self.state = .failed(error: error)
+                    self.state = .failure(error: error)
                     break
                 }
             } receiveValue: { [weak self] response in

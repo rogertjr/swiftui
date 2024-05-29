@@ -14,7 +14,7 @@ enum ResultState {
     case idle
     case loading
     case success(content: [Article])
-    case failed(error: Error)
+    case failure(error: Error)
 }
 
 protocol APIBuilder {

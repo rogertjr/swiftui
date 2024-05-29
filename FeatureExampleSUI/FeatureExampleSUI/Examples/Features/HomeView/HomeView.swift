@@ -61,6 +61,7 @@ private extension HomeView {
             case .controls: ControlsView()
             case .swiftData: RecentTransactionsView()
             case .combine: CombineHomeView()
+            case .observation: ObservationView()
             }
         }
     }
@@ -69,6 +70,8 @@ private extension HomeView {
         VStack {
             switch architecture {
             case .mvvm: MVVMHomeView()
+            case .mv: MVPatternView()
+            case .clean: EmptyView()
             }
         }
     }
