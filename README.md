@@ -9,4 +9,4 @@ This repository contains various examples demonstrating the usage of Swift progr
 - [Combine + MVVM](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Features/Combine)
 - [Observation] WIP
 - [SwiftData](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Features/SwiftData)
-- [SwiftData + Clean] WIP
+- [SwiftData + Clean](https://github.com/rogertjr/swiftui/tree/master/FeatureExampleSUI/FeatureExampleSUI/Examples/Clean-Architecture)
