@@ -45,7 +45,7 @@
 		D9FA7D652C06376400B9EBF8 /* MVVMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D642C06376400B9EBF8 /* MVVMHomeView.swift */; };
 		D9FA7D702C06397200B9EBF8 /* AnimatePlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D6E2C06397200B9EBF8 /* AnimatePlaceholderModifier.swift */; };
 		D9FA7D712C06397200B9EBF8 /* DeferredModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D6F2C06397200B9EBF8 /* DeferredModifier.swift */; };
-		D9FA7D732C06397D00B9EBF8 /* JSONMApper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D722C06397D00B9EBF8 /* JSONMApper.swift */; };
+		D9FA7D732C06397D00B9EBF8 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D722C06397D00B9EBF8 /* JSONMapper.swift */; };
 		D9FA7D762C06398600B9EBF8 /* CoinList.json in Resources */ = {isa = PBXBuildFile; fileRef = D9FA7D742C06398600B9EBF8 /* CoinList.json */; };
 		D9FA7D772C06398600B9EBF8 /* MockResultFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D752C06398600B9EBF8 /* MockResultFiles.swift */; };
 		D9FA7D792C06399700B9EBF8 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7D782C06399700B9EBF8 /* HapticManager.swift */; };
@@ -85,6 +85,12 @@
 		D9FA7DCE2C06703B00B9EBF8 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DCD2C06703B00B9EBF8 /* MovieDetailView.swift */; };
 		D9FA7DD02C0670FE00B9EBF8 /* MVPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */; };
 		D9FA7DD42C0758F900B9EBF8 /* CleanPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */; };
+		D9FA7DEE2C07BD0900B9EBF8 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DED2C07BD0900B9EBF8 /* EventListViewModel.swift */; };
+		D9FA7DF02C07BD2E00B9EBF8 /* EventRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DEF2C07BD2E00B9EBF8 /* EventRepositoryImpl.swift */; };
+		D9FA7DF22C07BD4400B9EBF8 /* EventSwiftDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DF12C07BD4400B9EBF8 /* EventSwiftDataImpl.swift */; };
+		D9FA7DF42C07BD5F00B9EBF8 /* EventUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DF32C07BD5F00B9EBF8 /* EventUseCases.swift */; };
+		D9FA7DF62C07BD7800B9EBF8 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DF52C07BD7800B9EBF8 /* EventRepository.swift */; };
+		D9FA7DF82C07BD8E00B9EBF8 /* WorkEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7DF72C07BD8E00B9EBF8 /* WorkEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,7 +133,7 @@
 		D9FA7D642C06376400B9EBF8 /* MVVMHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMHomeView.swift; sourceTree = "<group>"; };
 		D9FA7D6E2C06397200B9EBF8 /* AnimatePlaceholderModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatePlaceholderModifier.swift; sourceTree = "<group>"; };
 		D9FA7D6F2C06397200B9EBF8 /* DeferredModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeferredModifier.swift; sourceTree = "<group>"; };
-		D9FA7D722C06397D00B9EBF8 /* JSONMApper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMApper.swift; sourceTree = "<group>"; };
+		D9FA7D722C06397D00B9EBF8 /* JSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 		D9FA7D742C06398600B9EBF8 /* CoinList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CoinList.json; sourceTree = "<group>"; };
 		D9FA7D752C06398600B9EBF8 /* MockResultFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResultFiles.swift; sourceTree = "<group>"; };
 		D9FA7D782C06399700B9EBF8 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -168,6 +174,12 @@
 		D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPatternView.swift; sourceTree = "<group>"; };
 		D9FA7DD12C0753E600B9EBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanPatternView.swift; sourceTree = "<group>"; };
+		D9FA7DED2C07BD0900B9EBF8 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		D9FA7DEF2C07BD2E00B9EBF8 /* EventRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositoryImpl.swift; sourceTree = "<group>"; };
+		D9FA7DF12C07BD4400B9EBF8 /* EventSwiftDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSwiftDataImpl.swift; sourceTree = "<group>"; };
+		D9FA7DF32C07BD5F00B9EBF8 /* EventUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUseCases.swift; sourceTree = "<group>"; };
+		D9FA7DF52C07BD7800B9EBF8 /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		D9FA7DF72C07BD8E00B9EBF8 /* WorkEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,25 +263,13 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
-		D9FA7CD82BFFB0AE00B9EBF8 /* LazyGrids */ = {
-			isa = PBXGroup;
-			children = (
-				D9FA7CD92BFFB0BD00B9EBF8 /* LazyVGridView.swift */,
-				D9FA7CE12BFFB4FA00B9EBF8 /* LazyHGridView.swift */,
-			);
-			path = LazyGrids;
-			sourceTree = "<group>";
-		};
 		D9FA7CDB2BFFB0F800B9EBF8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7D8C2C0639E200B9EBF8 /* Coin.swift */,
-				D9FA7D8B2C0639E200B9EBF8 /* CoinDetailsSectionModel.swift */,
 				D9FA7D8A2C0639E200B9EBF8 /* StatisticModel.swift */,
 				D9FA7CDC2BFFB0FE00B9EBF8 /* Emoji.swift */,
 				D9FA7CE82BFFB6DE00B9EBF8 /* Item.swift */,
 				D9FA7CEC2BFFBB9E00B9EBF8 /* ChartData.swift */,
-				D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */,
 				D9FA7D212C05104B00B9EBF8 /* OnboardingPage.swift */,
 			);
 			path = Models;
@@ -295,7 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				D9FA7CE62BFFB6C900B9EBF8 /* GridView.swift */,
-				D9FA7CD82BFFB0AE00B9EBF8 /* LazyGrids */,
+				D9FA7CD92BFFB0BD00B9EBF8 /* LazyVGridView.swift */,
+				D9FA7CE12BFFB4FA00B9EBF8 /* LazyHGridView.swift */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -333,9 +334,8 @@
 		D9FA7D012C00BD8700B9EBF8 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7D0C2C011C4800B9EBF8 /* Components */,
-				D9FA7D082C011A4700B9EBF8 /* RecentTransactionsView.swift */,
-				D9FA7D0A2C011BDA00B9EBF8 /* TransactionView.swift */,
+				D9FA7DDC2C07BC3B00B9EBF8 /* Features */,
+				D9FA7DDB2C07BC3200B9EBF8 /* Common */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -389,10 +389,9 @@
 		D9FA7D252C06351700B9EBF8 /* MVVM-Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7DDA2C07BC1500B9EBF8 /* Common */,
 				D9FA7D612C06373D00B9EBF8 /* Features */,
 				D9FA7D5A2C06372500B9EBF8 /* Networking */,
-				D9FA7D4C2C0636B100B9EBF8 /* ViewModel */,
-				D9FA7D3F2C06368300B9EBF8 /* Components */,
 			);
 			path = "MVVM-Architecture";
 			sourceTree = "<group>";
@@ -460,7 +459,7 @@
 		D9FA7D502C0636CC00B9EBF8 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7D722C06397D00B9EBF8 /* JSONMApper.swift */,
+				D9FA7D722C06397D00B9EBF8 /* JSONMapper.swift */,
 				D9FA7D512C0636D400B9EBF8 /* Mock */,
 			);
 			path = Mappers;
@@ -497,6 +496,7 @@
 		D9FA7D622C06374300B9EBF8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7D4C2C0636B100B9EBF8 /* ViewModel */,
 				D9FA7D642C06376400B9EBF8 /* MVVMHomeView.swift */,
 			);
 			path = Home;
@@ -515,13 +515,14 @@
 		D9FA7DA72C064DF000B9EBF8 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7DB52C06521F00B9EBF8 /* View */,
-				D9FA7DAA2C06511800B9EBF8 /* Service */,
+				D9FA7DD52C07BB1D00B9EBF8 /* Common */,
+				D9FA7DB52C06521F00B9EBF8 /* Views */,
+				D9FA7DAA2C06511800B9EBF8 /* Networking */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
 		};
-		D9FA7DAA2C06511800B9EBF8 /* Service */ = {
+		D9FA7DAA2C06511800B9EBF8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				D9FA7DB02C0651A300B9EBF8 /* Model */,
@@ -529,7 +530,7 @@
 				D9FA7DAE2C06517B00B9EBF8 /* NewsApi.swift */,
 				D9FA7DB32C0651D400B9EBF8 /* NewsService.swift */,
 			);
-			path = Service;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D9FA7DB02C0651A300B9EBF8 /* Model */ = {
@@ -540,31 +541,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D9FA7DB52C06521F00B9EBF8 /* View */ = {
+		D9FA7DB52C06521F00B9EBF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D9FA7DBE2C0652FD00B9EBF8 /* Article */,
-				D9FA7DBB2C0652A600B9EBF8 /* Error */,
 				D9FA7DB62C06522400B9EBF8 /* Home */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D9FA7DB62C06522400B9EBF8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D9FA7DD62C07BB2900B9EBF8 /* ViewModel */,
 				D9FA7DB72C06523300B9EBF8 /* CombineHomeView.swift */,
-				D9FA7DB92C06525400B9EBF8 /* CombineHomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D9FA7DBB2C0652A600B9EBF8 /* Error */ = {
+		D9FA7DBB2C0652A600B9EBF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D9FA7DBC2C0652B400B9EBF8 /* ErrorView.swift */,
 			);
-			path = Error;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D9FA7DBE2C0652FD00B9EBF8 /* Article */ = {
@@ -579,7 +579,6 @@
 			isa = PBXGroup;
 			children = (
 				D9FA7DC22C0668A300B9EBF8 /* ObservationView.swift */,
-				D9FA7DCD2C06703B00B9EBF8 /* MovieDetailView.swift */,
 			);
 			path = Observation;
 			sourceTree = "<group>";
@@ -587,7 +586,7 @@
 		D9FA7DC42C066B9500B9EBF8 /* MV-Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */,
+				D9FA7DDF2C07BC7500B9EBF8 /* Features */,
 				D9FA7DC52C066F2500B9EBF8 /* Store */,
 			);
 			path = "MV-Architecture";
@@ -614,9 +613,204 @@
 		D9FA7DD22C0758EB00B9EBF8 /* Clean-Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */,
+				D9FA7DEA2C07BCE200B9EBF8 /* Application */,
+				D9FA7DE62C07BCBF00B9EBF8 /* Data */,
+				D9FA7DE22C07BC9300B9EBF8 /* Domain */,
 			);
 			path = "Clean-Architecture";
+			sourceTree = "<group>";
+		};
+		D9FA7DD52C07BB1D00B9EBF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DBB2C0652A600B9EBF8 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D9FA7DD62C07BB2900B9EBF8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DB92C06525400B9EBF8 /* CombineHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D9FA7DD72C07BB8500B9EBF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D8C2C0639E200B9EBF8 /* Coin.swift */,
+				D9FA7D8B2C0639E200B9EBF8 /* CoinDetailsSectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9FA7DD92C07BBAF00B9EBF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D042C0117C600B9EBF8 /* ExpenseTracker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9FA7DDA2C07BC1500B9EBF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DD72C07BB8500B9EBF8 /* Models */,
+				D9FA7D3F2C06368300B9EBF8 /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D9FA7DDB2C07BC3200B9EBF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DD92C07BBAF00B9EBF8 /* Models */,
+				D9FA7D0C2C011C4800B9EBF8 /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D9FA7DDC2C07BC3B00B9EBF8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DDE2C07BC4600B9EBF8 /* Transaction */,
+				D9FA7DDD2C07BC4100B9EBF8 /* Recents */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D9FA7DDD2C07BC4100B9EBF8 /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D082C011A4700B9EBF8 /* RecentTransactionsView.swift */,
+			);
+			path = Recents;
+			sourceTree = "<group>";
+		};
+		D9FA7DDE2C07BC4600B9EBF8 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7D0A2C011BDA00B9EBF8 /* TransactionView.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		D9FA7DDF2C07BC7500B9EBF8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DE12C07BC7E00B9EBF8 /* MovieDetail */,
+				D9FA7DE02C07BC7A00B9EBF8 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D9FA7DE02C07BC7A00B9EBF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DCF2C0670FE00B9EBF8 /* MVPatternView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D9FA7DE12C07BC7E00B9EBF8 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DCD2C06703B00B9EBF8 /* MovieDetailView.swift */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		D9FA7DE22C07BC9300B9EBF8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DE52C07BCB600B9EBF8 /* UseCase */,
+				D9FA7DE42C07BC9D00B9EBF8 /* Repository */,
+				D9FA7DE32C07BC9600B9EBF8 /* Event */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D9FA7DE32C07BC9600B9EBF8 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DF72C07BD8E00B9EBF8 /* WorkEvent.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D9FA7DE42C07BC9D00B9EBF8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DF52C07BD7800B9EBF8 /* EventRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D9FA7DE52C07BCB600B9EBF8 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DF32C07BD5F00B9EBF8 /* EventUseCases.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D9FA7DE62C07BCBF00B9EBF8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DE82C07BCCE00B9EBF8 /* DataSource */,
+				D9FA7DE72C07BCC500B9EBF8 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D9FA7DE72C07BCC500B9EBF8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DEF2C07BD2E00B9EBF8 /* EventRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D9FA7DE82C07BCCE00B9EBF8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DE92C07BCD300B9EBF8 /* SwiftData */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D9FA7DE92C07BCD300B9EBF8 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DF12C07BD4400B9EBF8 /* EventSwiftDataImpl.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		D9FA7DEA2C07BCE200B9EBF8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DEC2C07BCF500B9EBF8 /* ViewModels */,
+				D9FA7DEB2C07BCEC00B9EBF8 /* Views */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D9FA7DEB2C07BCEC00B9EBF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DD32C0758F900B9EBF8 /* CleanPatternView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9FA7DEC2C07BCF500B9EBF8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA7DED2C07BD0900B9EBF8 /* EventListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +887,7 @@
 				D9FA7D052C0117C600B9EBF8 /* ExpenseTracker.swift in Sources */,
 				D9FA7CF62BFFC84500B9EBF8 /* PieChartView.swift in Sources */,
 				D9FA7D112C011C8300B9EBF8 /* Date+Ext.swift in Sources */,
+				D9FA7DF82C07BD8E00B9EBF8 /* WorkEvent.swift in Sources */,
 				D9FA7D792C06399700B9EBF8 /* HapticManager.swift in Sources */,
 				D9FA7DD02C0670FE00B9EBF8 /* MVPatternView.swift in Sources */,
 				D9FA7D9F2C063A2500B9EBF8 /* CoinService.swift in Sources */,
@@ -724,10 +919,13 @@
 				D9FA7DB42C0651D400B9EBF8 /* NewsService.swift in Sources */,
 				D9FA7CF42BFFC2CA00B9EBF8 /* MultipleDataSeriesChartView.swift in Sources */,
 				D9FA7DCE2C06703B00B9EBF8 /* MovieDetailView.swift in Sources */,
+				D9FA7DF62C07BD7800B9EBF8 /* EventRepository.swift in Sources */,
 				D9FA7CC72BFFAEAB00B9EBF8 /* HomeView.swift in Sources */,
 				D9FA7D852C0639AD00B9EBF8 /* TopMoversView.swift in Sources */,
 				D9FA7D892C0639CF00B9EBF8 /* Sort.swift in Sources */,
+				D9FA7DEE2C07BD0900B9EBF8 /* EventListViewModel.swift in Sources */,
 				D9FA7CE02BFFB34000B9EBF8 /* EmojiCellView.swift in Sources */,
+				D9FA7DF02C07BD2E00B9EBF8 /* EventRepositoryImpl.swift in Sources */,
 				D9FA7DC82C066F3700B9EBF8 /* Store.swift in Sources */,
 				D9FA7DAF2C06517B00B9EBF8 /* NewsApi.swift in Sources */,
 				D9FA7DCC2C06700A00B9EBF8 /* Movie.swift in Sources */,
@@ -748,9 +946,10 @@
 				D9FA7CC52BFFAEAB00B9EBF8 /* FeatureExampleSUIApp.swift in Sources */,
 				D9FA7CF22BFFC17700B9EBF8 /* HeatChartView.swift in Sources */,
 				D9FA7CE22BFFB4FA00B9EBF8 /* LazyHGridView.swift in Sources */,
-				D9FA7D732C06397D00B9EBF8 /* JSONMApper.swift in Sources */,
+				D9FA7D732C06397D00B9EBF8 /* JSONMapper.swift in Sources */,
 				D9FA7D932C063A0300B9EBF8 /* UIApplication+Ext.swift in Sources */,
 				D9FA7D812C0639AD00B9EBF8 /* TopMoversItemView.swift in Sources */,
+				D9FA7DF42C07BD5F00B9EBF8 /* EventUseCases.swift in Sources */,
 				D9FA7CFB2BFFD21400B9EBF8 /* ItemRowView.swift in Sources */,
 				D9FA7D712C06397200B9EBF8 /* DeferredModifier.swift in Sources */,
 				D9FA7D092C011A4700B9EBF8 /* RecentTransactionsView.swift in Sources */,
@@ -758,6 +957,7 @@
 				D9FA7CF02BFFBC6200B9EBF8 /* BarChartsView.swift in Sources */,
 				D9FA7DB22C0651AE00B9EBF8 /* Article.swift in Sources */,
 				D9FA7D982C063A1900B9EBF8 /* CoinDetailSectionView.swift in Sources */,
+				D9FA7DF22C07BD4400B9EBF8 /* EventSwiftDataImpl.swift in Sources */,
 				D9FA7D822C0639AD00B9EBF8 /* LineChartView.swift in Sources */,
 				D9FA7D702C06397200B9EBF8 /* AnimatePlaceholderModifier.swift in Sources */,
 				D9FA7DD42C0758F900B9EBF8 /* CleanPatternView.swift in Sources */,
